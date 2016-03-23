@@ -1,0 +1,8 @@
+{% extends "main.twig" %}
+
+{% block content %}
+<br><br>
+{% for id, strip in strips %}
+<a href="/{{id}}">[{{id}}] {{strip.title}}</a><br>
+{% endfor %}
+{% endblock %}

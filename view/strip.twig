@@ -1,0 +1,8 @@
+{% extends "main.twig" %}
+
+{% block content %}
+<h1>[{{strip.id}}] {{strip.title}}</h1>
+<img src="/strip/{{strip.id}}.jpg" {% if strip.style %}style="{{strip.style}}"{% endif %} alt="{{strip.title}}" title="{{strip.caption}}">
+
+<p style='margin-top:3em'><a href="http://xkcd.com/{{strip.id}}">原文連結</a>
+{% endblock %}

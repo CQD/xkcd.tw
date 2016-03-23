@@ -1,0 +1,68 @@
+application: sonorous-cacao-89706
+version: prod
+runtime: php55
+api_version: 1
+threadsafe: true
+
+handlers:
+###################################################
+
+- url: /robots.txt
+  static_files: public/robots.txt
+  upload: public/robots.txt
+
+#- url: /favicon.ico
+#  static_files: public/favicon.ico
+#  upload: public/favicon.ico
+
+- url: /template.html
+  static_files: public/template.html
+  upload: public/template.html
+
+- url: /css
+  static_dir: public/css
+
+#- url: /fonts
+#  static_dir: public/fonts
+
+- url: /img
+  static_dir: public/img
+
+- url: /strip
+  static_dir: public/strip
+
+- url: /js
+  static_dir: public/js
+
+#- url: /static
+#  static_dir: public/static
+
+
+####################################################
+
+- url: /sitemap.xml
+  script: src/sitemap.php
+
+- url: /404
+  script: src/xkcd404.php
+
+- url: /[0-9]+
+  script: src/strip.php
+
+- url: /
+  script: src/index.php
+
+
+#- url: /.*
+#  script: error/404.php
+
+###################################################
+
+#error_handlers:
+#- file: error/default.html
+
+# - error_code: over_quota
+#   file: error/over_quota.html
+
+# - error_code: dos_api_denial
+#   file: error/over_quota.html

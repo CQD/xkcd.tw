@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>xkcd 翻譯：{{ page_title }}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.8, maximum-scale=2.0">
+<link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
+<link rel="stylesheet" type="text/css" href="/css/main.css"/>
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+
+<meta property="og:site_name" content="xkcd 翻譯" />
+{% if og.title %}<meta property="og:title" content="{{ og.title }}" />
+{% endif %}
+{% if og.url %}<meta property="og:url" content="{{ og.url }}" />
+{% endif %}
+{% if og.description %}<meta property="og:description" content="{{ og.desc }}" />
+{% endif %}
+{% if og.image %}<meta property="og:image" content="{{ og.image }}" />
+{% endif %}
+
+{% if ld %}
+<script type='application/ld+json'>
+{{ ld|json_encode() }}
+</script>
+{% endif %}
+
+{#--
+<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="/atom.xml"/>
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/rss.xml"/>
+--#}
+</head>
+<body>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-368263-19', 'auto');
+ga('send', 'pageview');
+</script>
+<div class="wrapper">
+<header>
+<a href="/"><h1>xkcd</h1></a>
+<p>這裡翻譯某個關於浪漫、諷刺、數學、以及語言的漫畫</p>
+</header>
+
+<div id="content">
+{% block content %}{% endblock %}
+</div>
+
+<footer>
+<p>這是 <a href="http://xkcd.com/">xkcd</a> 的非官方翻譯，以 <a rel="license" href="http://creativecommons.org/licenses/by-nc/2.5/">CC-BY-NC 2.5</a> 授權。xkcd 漫畫作者為<a href="https://zh.wikipedia.org/wiki/%E5%85%B0%E5%BE%B7%E5%B0%94%C2%B7%E9%97%A8%E7%BD%97">蘭德爾·門羅</a>。
+</footer>
+
+</div>
+</body>
+</html>
