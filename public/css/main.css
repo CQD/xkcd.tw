@@ -50,6 +50,7 @@ hr {
     max-width: 90%;
 }
 
+
 footer{
     text-align: center;
     color:#999;
@@ -64,4 +65,9 @@ a:link, a:visited{
 }
 a:hover{
     color:#f93;
+}
+
+.comment{
+    font-size:small;
+    color:#66aaae;
 }
