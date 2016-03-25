@@ -57,7 +57,12 @@ footer{
     font-size: small;
 }
 
-
+#strip_list{
+  padding-top: 3em;
+  -webkit-columns: 250px 3;
+     -moz-columns: 250px 3;
+          columns: 250px 3;
+}
 
 a:link, a:visited{
     color:#963;
