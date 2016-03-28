@@ -1,8 +1,14 @@
 {% extends "main.twig" %}
 
+{% if strip.img_url %}
+{% set img_url = strip.img_url %}
+{% else %}
+{% set img_url = "/strip/" ~ strip.id ~ ".jpg" %}
+{% endif %}
+
 {% block content %}
 <h1>[{{strip.id}}] {{strip.title}}</h1>
-<img src="/strip/{{strip.id}}.jpg" {% if strip.style %}style="{{strip.style}}"{% endif %} alt="{{strip.title}}" title="{{strip.caption}}">
+<img src="{{img_url}}" {% if strip.style %}style="{{strip.style}}"{% endif %} alt="{{strip.title}}" title="{{strip.caption}}">
 
 {% if strip.comment %}<p class="comment">{{strip.comment}}</p>{% endif %}
 
