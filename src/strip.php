@@ -12,6 +12,14 @@ $strip = $strips[$id];
 
 $strip['id'] = $id;
 
+$strip_ids = array_keys($strips);
+$pos = array_search($id, $strip_ids);
+if ($pos > 0) {
+    $strip['next_id'] = $strip_ids[$pos - 1];
+}
+if ($pos < count($strip_ids)) {
+    $strip['prev_id'] = $strip_ids[$pos + 1];
+}
 
 $og['title'] = "xkcd 翻譯：" . $strip['title'];
 $og['url'] = sprintf('http://xkcd.tw/%d', $id);

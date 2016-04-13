@@ -46,6 +46,11 @@ hr {
     border-top:1px solid #ccc;
     border-bottom:1px solid #ccc;
 }
+
+#content h1{
+    margin-bottom: 0;
+}
+
 #content img{
     max-width: 90%;
 }
