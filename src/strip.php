@@ -21,7 +21,7 @@ if ($pos < count($strip_ids)) {
     $strip['prev_id'] = $strip_ids[$pos + 1];
 }
 
-$og['title'] = "xkcd 翻譯：" . $strip['title'];
+$og['title'] = "xkcd 中文翻譯：" . $strip['title'];
 $og['url'] = sprintf('http://xkcd.tw/%d', $id);
 $og['image'] = sprintf('http://xkcd.tw/strip/%d.jpg', $id);
 
