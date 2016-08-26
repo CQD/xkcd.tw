@@ -11,7 +11,10 @@
 {% if strip.prev_id %}<div style="float:left;margin:-1em 0 0 3em;"><a href="/{{strip.prev_id}}">⇐前一個翻譯</a></div>{% endif%}
 {% if strip.next_id %}<div style="float:right;margin:-1em 3em 0 0;"><a href="/{{strip.next_id}}">下一個翻譯⇒</a></div>{% endif%}
 <div style="clear:both; height:1em;"></div>
+
+{% if strip.link %}<a href="{{strip.link}}">{% endif %}
 <img src="{{img_url}}" {% if strip.style %}style="{{strip.style}}"{% endif %} alt="{{strip.title}}" title="{{strip.caption}}">
+{% if strip.link %}</a>{% endif %}
 
 {% if strip.comment %}<p class="comment">{{strip.comment}}</p>{% endif %}
 
