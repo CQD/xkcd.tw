@@ -8,8 +8,8 @@
 
 {% block content %}
 <h1>[{{strip.id}}] {{strip.title}}</h1>
-{% if strip.prev_id %}<div style="float:left;margin:-1em 0 0 3em;"><a href="/{{strip.prev_id}}">⇐前一個翻譯</a></div>{% endif%}
-{% if strip.next_id %}<div style="float:right;margin:-1em 3em 0 0;"><a href="/{{strip.next_id}}">下一個翻譯⇒</a></div>{% endif%}
+{% if strip.prev_id %}<div style="float:left;margin:0 0 0 3em;"><a href="/{{strip.prev_id}}">⇐前一個翻譯</a></div>{% endif%}
+{% if strip.next_id %}<div style="float:right;margin:0 3em 0 0;"><a href="/{{strip.next_id}}">下一個翻譯⇒</a></div>{% endif%}
 <div style="clear:both; height:1em;"></div>
 
 {% if strip.link %}<a href="{{strip.link}}">{% endif %}
