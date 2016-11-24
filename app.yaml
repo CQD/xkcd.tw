@@ -41,9 +41,8 @@ handlers:
 - url: /
   script: src/index.php
 
-
-#- url: /.*
-#  script: error/404.php
+- url: /.*
+  script: src/error404.php
 
 ###################################################
 
