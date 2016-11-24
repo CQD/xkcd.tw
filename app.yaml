@@ -15,15 +15,8 @@ handlers:
 #  static_files: public/favicon.ico
 #  upload: public/favicon.ico
 
-- url: /template.html
-  static_files: public/template.html
-  upload: public/template.html
-
 - url: /css
   static_dir: public/css
-
-#- url: /fonts
-#  static_dir: public/fonts
 
 - url: /img
   static_dir: public/img
@@ -33,10 +26,6 @@ handlers:
 
 - url: /js
   static_dir: public/js
-
-#- url: /static
-#  static_dir: public/static
-
 
 ####################################################
 
