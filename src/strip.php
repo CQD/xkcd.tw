@@ -5,7 +5,7 @@ $id_str = trim($_SERVER['REQUEST_URI'], '/');
 $id = (int) $id_str;
 
 if (!isset($strips[$id])) {
-    die404();
+    die404("你要看的東西我還沒翻譯到，傷心，真傷心...");
 }
 
 $strip = $strips[$id];
