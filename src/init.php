@@ -339,7 +339,7 @@ $strips = [
     ],
     619 => [
         'title' => '功能支援',
-        'caption' => '我知道有些人已經有平滑 flash 影片支援，不過我跟我的 Intel 顯示卡還在等開發流程中的某個 kernel patch，不然我們只能到格子狀的喬恩·史都華',
+        'caption' => '我知道有些人已經有平滑 flash 影片支援，不過我跟我的 Intel 顯示卡還在等開發流程中的某個 kernel patch，不然我們只能看到格子狀的喬恩·史都華',
         'style' => "max-height:326px",
     ],
     600 => [
