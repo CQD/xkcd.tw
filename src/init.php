@@ -17,6 +17,11 @@ $strips = [
         'caption' => '神經科學部門 / 格言：我發誓如果我聽到「鏡像神經元」這個詞的話我會翻桌',
         'style' => "max-height:314px",
     ],
+    1755 => [
+        'title' => '舊時光',
+        'caption' => 'Lot of drama in those days, including constant efforts to force the &quot;Reflections on Trusting Trust&quot; guy into retirement so we could stop being so paranoid about compilers.',
+        'style' => "max-height:530px",
+    ],
     1737 => [
         'title' => '資料中心規模',
         'caption' => '艾西莫夫（最後的問題）漫畫裡的AC是藉由把每個資料中心透過超空間相連而建立起來的，這能解釋一些事情。熵沒有被逆轉，他只是在宇宙終結時扔掉它然後重新買一個新的進來。',
