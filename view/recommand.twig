@@ -1,0 +1,66 @@
+{% extends "main.twig" %}
+
+{% block head %}
+<script src="/js/jquery.min.js"></script>
+<script type="text/javascript">
+done_strips = [404,{{ strip_ids|join(',') }}];
+$(function(){
+    $('#check').on('click', function(){
+        let id_wanted = parseInt($('#id_wanted').val().trim());
+
+        if (! (id_wanted > 0) ) {
+            alert("請輸入數字編號");
+            return;
+        } else {
+            $('#id_wanted').val(id_wanted);
+        }
+
+        if (0 <= $.inArray(id_wanted, done_strips)) {
+            location = '/' + id_wanted;
+            return;
+        }
+
+        $('#desc').slideUp();
+
+        var $show_orig = $('#show_orig');
+        $show_orig.text('正在載入資料');
+
+        $.get('/api/strip/original/'+id_wanted, function(data){
+            $show_orig.text('');
+            $show_orig.children().remove();
+            $('<p>').text(data.title).appendTo($show_orig);
+            $('<img>')
+                .attr('src', data.img)
+                .attr('title', data.alt)
+                .attr('alt', data.alt)
+                .appendTo($show_orig);
+            $('<br>').appendTo($show_orig);
+            $('<button>').text('是的，我要推薦這篇')
+                .on('click', function(){
+                    $show_orig.children().slideUp();
+                    $('<p>').text('好的，感謝您的推薦 :)').appendTo($show_orig);
+                    $('<p>').text('順便提醒一下，一直重複送也不會比較早被翻譯喔。').appendTo($show_orig);
+                    $.get('/api/recommand/'+id_wanted);
+                })
+                .appendTo($show_orig);
+        });
+    })
+});
+</script>
+{% endblock %}
+
+{% block content %}
+<h1>推薦翻譯</h1>
+<div id='desc'>
+<p>希望某篇 xkcd 漫畫有中文翻譯嗎？這裡是許願池。
+<p>請在這邊輸入該篇漫畫的<span style="color:#f63">編號</span>，如果還沒有被翻譯，xkcd.tw 會盡快處理。
+<p>當然，「盡快」是沒有保證的（笑）
+</div>
+
+<p><input id="id_wanted">
+<button id="check">檢查</button>
+
+<div id="show_orig">
+</div>
+
+{% endblock %}

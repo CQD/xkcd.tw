@@ -1,6 +1,7 @@
 {% extends "main.twig" %}
 
 {% block content %}
+<p>如果有想推薦的 xkcd 漫畫沒有列在這裡，歡迎到<a href="/recommand">推薦翻譯</a>頁面填寫。
 <div id="strip_list">
 {% for id, strip in strips %}
 <a href="/{{id}}">[{{id}}] {{strip.title}}</a><br>

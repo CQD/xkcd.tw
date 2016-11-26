@@ -41,8 +41,14 @@ handlers:
 - url: /
   script: src/index.php
 
+- url: /recommand
+  script: src/recommand.php
+
 - url: /api/strip/original/[0-9]+
   script: src/api_strip_original.php
+
+- url: /api/recommand/[0-9]+
+  script: src/api_recommand.php
 
 - url: /.*
   script: src/error404.php
