@@ -50,6 +50,9 @@ handlers:
 - url: /api/recommand/[0-9]+
   script: src/api_recommand.php
 
+- url: /api/list_recommand/?
+  script: src/api_list_recommand.php
+
 - url: /.*
   script: src/error404.php
 
