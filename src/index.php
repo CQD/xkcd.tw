@@ -1,7 +1,7 @@
 <?php
 include __DIR__ . '/init.php';
 
-$og['title'] = '首頁';
+$og['title'] = 'xkcd 中文翻譯';
 $og['url'] = 'http://xkcd.tw';
 
 echo $twig->render('index.twig', [
