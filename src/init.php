@@ -6,7 +6,39 @@ $twig = new \Twig_Environment(new \Twig_Loader_Filesystem(__DIR__ . '/../view'))
 $og = [
 ];
 
+// 紀錄：
+// 1770 ~ 1761 之間還沒看
 $strips = [
+    1781 => [
+        'title' => '古代神器',
+        'caption' => '我沒想到你能只用離群值就做出整組資料',
+        'style' => "max-height:351px",
+    ],
+    1780 => [
+        'title' => '家電維修',
+        'caption' => '[拿著三相馬達]很明顯的，問題在於我原本拆下這顆馬達的加濕器已經壞了。',
+        'style' => "max-height:270px",
+    ],
+    1776 => [
+        'title' => '麋鹿',
+        'caption' => 'And then in a twinkling, a sound gave me pause / From the roof came the scratching of eight tarsal claws.',
+        'style' => "max-height:249px",
+    ],
+    1775 => [
+        'title' => '學到的事情',
+        'caption' => '猜猜看是誰兩隻大拇指受傷，在急診室待了一整夜，只因為試著去救一隻跑進停紅燈的車子底下，後來還爬到引擎室裡面的小貓？而且還要感謝抗生素讓他能保住兩隻大拇指？就是這傢伙（註：小貓沒事！）',
+        'style' => "max-height:543px",
+    ],
+    1773 => [
+        'title' => '負能量',
+        'caption' => '[Google搜尋]如何封鎖自家草坪',
+        'style' => "max-height:227px",
+    ],
+    1770 => [
+        'title' => '改介面',
+        'caption' => '我知道他們總是說這是永久性的更動，不過當他們聽到我們抱怨的多大聲之後，總是會有人找到方法把東西改回來。',
+        'style' => "max-height:403px",
+    ],
     1761 => [
         'title' => '牽拖',
         'caption' => '我敢說如果我對著我朋友大吼大叫把他們嚇得半死，我心情會變好',
@@ -289,6 +321,11 @@ $strips = [
         'title' => '五星評分',
         'caption' => '我不小心迷路走進全世界最嚇人的葬禮，墓碑上面只有名字跟五星評分。我嚇死了。我回到家以後想要在 Yelp 上面寫一篇壞的評論文，但當我的游標移到「一顆星」的按鈕上面時，我感到一陣惡寒...',
         'style' => "max-height:310px",
+    ],
+    1022 => [
+        'title' => '看來事已至此',
+        'caption' => '「至什麼此？」「你，我，在這一刻」',
+        'style' => "max-height:420px",
     ],
     979 => [
         'title' => '前人的智慧',
