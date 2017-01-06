@@ -32,10 +32,10 @@ handlers:
 - url: /sitemap.xml
   script: src/sitemap.php
 
-- url: /404
+- url: /404/?
   script: src/xkcd404.php
 
-- url: /[0-9]+
+- url: /[0-9]+/?
   script: src/strip.php
 
 - url: /
