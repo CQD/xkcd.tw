@@ -9,6 +9,11 @@ $og = [
 // 紀錄：
 // 1770 ~ 1761 之間還沒看
 $strips = [
+    1782 => [
+        'title' => '團隊通訊',
+        'caption' => '2078:他終於宣布他從 screen + irssi 跳槽到 tmux + weechat',
+        'style' => "max-height:299px",
+    ],
     1781 => [
         'title' => '古代神器',
         'caption' => '我沒想到你能只用離群值就做出整組資料',
