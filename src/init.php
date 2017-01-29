@@ -9,6 +9,47 @@ $og = [
 // 紀錄：
 // 1770 ~ 1761 之間還沒看
 $strips = [
+    1791 => [
+        'title' => '折射望遠鏡 vs 反射望遠鏡',
+        'caption' => '反過來說，折射式望遠鏡的聚光能力較弱，所以不容易分辨出影子人或是邪神 Chernabog',
+        'style' => "max-height:306px",
+    ],
+    1790 => [
+        'title' => '我難過',
+        'caption' => '轉個九十度，所有的 effect 都是 side effect',
+        'style' => "max-height:297px",
+        'comment' => "難過的點是 2016 美國總統大選結果，作者五月病大爆發",
+    ],
+    1789 => [
+        'title' => '電話號碼',
+        'caption' => '簡訊應該是傳得到，不過太長的簡訊會被轉成語音信箱，我好像把語音信箱擋掉了。',
+        'style' => "max-height:471px",
+    ],
+    1788 => [
+        'title' => '駁船',
+        'caption' => '我的人生目標是將一艘駁船發射到空中，然後降落在 Elon Musk 的火箭上。',
+        'style' => "max-height:404px",
+    ],
+    1787 => [
+        'title' => '語音指令',
+        'caption' => 'Davork 句子乍看之下比較難發音，但研究指出這對聲帶壓力比較小。',
+        'style' => "max-height:378px",
+    ],
+    1786 => [
+        'title' => '垃圾',
+        'caption' => '而且裡面時間流逝的速度不太一樣，裡面大部分的垃圾已經分解掉幾百年了。我有想過看要不要去聯絡尤卡山，也許他們有興趣談合作。',
+        'style' => "max-height:274px",
+    ],
+    1785 => [
+        'title' => 'Wifi',
+        'caption' => '更右邊那塊的人能夠正常連上，不過能連上的理由跟「韌體」什麼的鬼東西有關',
+        'style' => "max-height:317px",
+    ],
+    1783 => [
+        'title' => 'EMail',
+        'caption' => 'Rob，不好意思現在才回信，你還有要去看瓦力首映場嗎？',
+        'style' => "max-height:359px",
+    ],
     1782 => [
         'title' => '團隊通訊',
         'caption' => '2078:他終於宣布他從 screen + irssi 跳槽到 tmux + weechat',
