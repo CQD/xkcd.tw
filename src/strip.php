@@ -30,6 +30,10 @@ $og['title'] = "xkcd 中文翻譯：" . $strip['title'];
 $og['url'] = sprintf('http://xkcd.tw/%d', $id);
 $og['image'] = sprintf('http://xkcd.tw/strip/%d.jpg', $id);
 
+if (isset($strip['og'])) {
+    $og = array_merge($og, $strip['og']);
+}
+
 echo $twig->render('strip.twig', [
     'page_title' => $strip['title'],
     'strip' => $strip,
