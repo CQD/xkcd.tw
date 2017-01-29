@@ -13,6 +13,9 @@ if (!isset($strips[$id])) {
     die404("你要看的東西我還沒翻譯到，傷心，真傷心...");
 }
 
+header("ETag: " . md5('xkcd.tw.strip.' . $id));
+header('Cache-Control: public, max-age=3600'); // cache 1 小時
+
 $strip = $strips[$id];
 
 $strip['id'] = $id;
