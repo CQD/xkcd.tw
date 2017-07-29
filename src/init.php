@@ -20,10 +20,20 @@ $strips = [
         'caption' => '他們會說結果就能代表一切，但這是哪門子的失敗主義論點？如果同意這說法，那什麼鬼東西都能同意了。',
         'style' => "max-height:470px",
     ],
+    1823 => [
+        'title' => '最熱門的編輯器',
+        'caption' => 'Elon Musk 終於把我從特斯拉的內部 repo 裡面踢掉了，因為我一直在送 PR 讓方向控制能支援 VIM 快速鍵。',
+        'style' => "max-height:264px",
+    ],
     1813 => [
         'title' => '嘔吐表情符號',
         'caption' => '我最喜歡的應該會是 U+1F609 U+1F93F 微笑嘔吐臉。',
         'style' => "max-height:323px",
+    ],
+    1810 => [
+        'title' => '聊天系統',
+        'caption' => '我是 Instagram 使用者裡面，少數只透過 UNIX talk 連結的。',
+        'style' => "max-height:537px",
     ],
     1803 => [
         'title' => '地點評論',
@@ -129,6 +139,11 @@ $strips = [
         'title' => '舊時光',
         'caption' => 'Lot of drama in those days, including constant efforts to force the &quot;Reflections on Trusting Trust&quot; guy into retirement so we could stop being so paranoid about compilers.',
         'style' => "max-height:530px",
+    ],
+    1741 => [
+        'title' => '工作量',
+        'caption' => '雖然是我自己想像的，但我對帶開關的電源線起火事件已經有*這麼*多意見了...',
+        'style' => "max-height:447px",
     ],
     1737 => [
         'title' => '資料中心規模',
@@ -458,6 +473,11 @@ $strips = [
         'caption' => '警告：一部分的相依軟體更新需要 21.1.2 版的 Oracle/Sun Java(TM) JDK(TM) 更新程式執行環境資料更新程式，這在您的系統上無法取得。',
         'style' => "max-height:408px",
     ],
+    1179 => [
+        'title' => 'ISO 8601',
+        'caption' => 'ISO 8601 是在 06/05/88 出版，最近一次修訂是 12/01/04',
+        'style' => "max-height:456px",
+    ],
     1174 => [
         'title' => 'APP',
         'caption' => '我按下 No 的時候大概表示我已經放棄了。所以別再把我轉址到剛剛我原本想打開的那頁了，帶我回首頁吧。',
@@ -564,7 +584,11 @@ $strips = [
         'caption' => '另外還有個塊魂裡面東西都只比你大一點，還有個瑪力歐的無敵星星在你剛好吃不到的地方。',
         'style' => "max-height:476px",
     ],
-
+    697 => [
+        'title' => '拉伸強度 vs 剪切強度',
+        'caption' => '雖然實際上，傷害是在派對主辦人在電梯的纜線上打洞來掛旗子的時候造成的。',
+        'style' => "max-height:604px",
+    ],
     695 => [
         'title' => '精神號',
         'caption' => '2010年1月26日，任務的第 2274 個火星日，NASA 宣布精神號無法移動轉為固定式研究站，預計數個月後就會因為太陽能板被塵埃覆蓋，電力不足而必須關閉。',
@@ -574,6 +598,11 @@ $strips = [
         'title' => '科學畫面',
         'caption' => '那隻老鼠看來很不安，他一定是感應到了奈米機器人！灰色警戒，我們面臨了 Helvetica 事件！',
         'style' => "max-height:865px",
+    ],
+    670 => [
+        'title' => 'Spinal Tap 的放大器',
+        'caption' => '哇喔，每...呃...還不用 200，真划算！',
+        'style' => "max-height:237px",
     ],
     664 => [
         'title' => '學術界 vs 商業界',
@@ -671,6 +700,11 @@ $strips = [
         'caption' => '這只是用來抓那些跑掉的邏輯學家的，其實每道門都出不去。',
         'style' => "max-height:455px",
     ],
+    245 => [
+        'title' => '地磚',
+        'caption' => '最麻煩的是當人行道地磚的裂縫跟你的自然步伐不同步的時候。',
+        'style' => "max-height:192px",
+    ],
     244 => [
         'title' => '桌上角色扮演',
         'caption' => '我好像有把兩隻傳送戒指的其中一隻丟進海底過，結果滿有趣的',
@@ -685,6 +719,11 @@ $strips = [
         'title' => '人貓距離',
         'caption' => '是耶！你坐在那裡耶！你好啊，小貓咪！',
         'style' => "max-height:439px",
+    ],
+    208 => [
+        'title' => '正規表示式',
+        'caption' => '等等，少跳脫一個空白，咿～～～[敲敲敲]～～～',
+        'style' => 'max-height:607px',
     ],
     202 => [
         'title' => 'Youtube',
