@@ -66,3 +66,11 @@ handlers:
 
 # - error_code: dos_api_denial
 #   file: error/over_quota.html
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+- asset/
+- .git/
