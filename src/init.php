@@ -81,9 +81,10 @@ $strips = [
         'style' => "max-height:306px",
     ],
     1790 => [
-        'title' => '我難過',
+        'title' => '五月病',
         'caption' => '轉個九十度，所有的 effect 都是 side effect',
         'style' => "max-height:297px",
+        'comment' => '原文標題的「SAD」在 explainxkcd.com 有一些爭論。',
     ],
     1789 => [
         'title' => '電話號碼',
