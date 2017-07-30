@@ -25,7 +25,7 @@
 
 {% if ld %}
 <script type='application/ld+json'>
-{{ ld|json_encode() }}
+{{ ld|json_encode()|raw }}
 </script>
 {% endif %}
 
