@@ -77,7 +77,43 @@ a:hover{
     color:#f93;
 }
 
+.prevLink{
+    float:left;
+    margin:0 0 0 3em;
+}
+.nextLink{
+    float:right;
+    margin:0 3em 0 0;
+}
+
 .comment{
     font-size:small;
     color:#66aaae;
+}
+
+@media (max-width:620px){
+    header h1{
+        height: 58px;
+        width: 103px;
+        float:left;
+    }
+    header p{
+        width: calc(100vw - 32px - 104px);
+        margin:20px 0 0;
+        padding:0;
+        font-size:12px;
+        line-height:1.2em;
+        max-height:2.4em;
+        overflow:hidden;
+    }
+    #content {
+        clear:both;
+    }
+    #content h1{
+        font-size:25px;
+    }
+    .prevLink, .nextLink{
+        margin: 0;
+        font-size: 14px;
+    }
 }
