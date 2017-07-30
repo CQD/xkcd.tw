@@ -13,7 +13,7 @@
 <div style="clear:both; height:1em;"></div>
 
 {% if strip.link %}<a href="{{strip.link}}">{% endif %}
-<img src="{{img_url}}" {% if strip.style %}style="{{strip.style}}"{% endif %} alt="{{strip.title}}" title="{{strip.caption}}">
+<img src="{{img_url}}" style="max-height:{{strip.height}}px" alt="{{strip.title}}" title="{{strip.caption}}">
 {% if strip.link %}</a>{% endif %}
 
 {% if strip.comment %}<p class="comment">{{strip.comment}}</p>{% endif %}
