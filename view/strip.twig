@@ -1,11 +1,5 @@
 {% extends "main.twig" %}
 
-{% if strip.img_url %}
-{% set img_url = strip.img_url %}
-{% else %}
-{% set img_url = "/strip/" ~ strip.id ~ ".jpg" %}
-{% endif %}
-
 {% block content %}
 <h1>[{{strip.id}}] {{strip.title}}</h1>
 {% if strip.prev_id %}<div class="prevLink"><a href="/{{strip.prev_id}}">⇐前一個翻譯</a></div>{% endif%}
@@ -13,7 +7,7 @@
 <div style="clear:both; height:1em;"></div>
 
 {% if strip.link %}<a href="{{strip.link}}">{% endif %}
-<img src="{{img_url}}" style="max-height:{{strip.height}}px" alt="{{strip.title}}" title="{{strip.caption}}">
+<img src="{{strip.img_url}}" style="max-height:{{strip.height}}px" alt="{{strip.title}}" title="{{strip.caption}}">
 {% if strip.link %}</a>{% endif %}
 
 {% if strip.comment %}<p class="comment">{{strip.comment}}</p>{% endif %}
