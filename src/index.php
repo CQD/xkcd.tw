@@ -5,7 +5,7 @@ header("ETag: " . md5('xkcd.tw.index' . date('Y-m-d')));
 header('Cache-Control: public, max-age=3600'); // cache 1 小時
 
 $og['title'] = 'xkcd 中文翻譯';
-$og['url'] = 'http://xkcd.tw';
+$og['url'] = 'https://xkcd.tw';
 
 $ld = [
     "@context" => "http://schema.org/",

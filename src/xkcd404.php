@@ -7,7 +7,7 @@ if ('/' === substr($_SERVER['REQUEST_URI'], -1)) {
 }
 
 $og['title'] = "xkcd 翻譯：404" . $strip['title'];
-$og['url'] = 'http://xkcd.tw/404';
+$og['url'] = 'https://xkcd.tw/404';
 
 echo $twig->render('xkcd_404.twig', [
     'page_title' => '404',

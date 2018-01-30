@@ -2,7 +2,7 @@
 include __DIR__ . '/init.php';
 
 $og['title'] = '推薦翻譯';
-$og['url'] = 'http://xkcd.tw/recommand';
+$og['url'] = 'https://xkcd.tw/recommand';
 
 echo $twig->render('recommand.twig', [
     'page_title' => '推薦翻譯',

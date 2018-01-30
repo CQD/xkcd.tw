@@ -432,7 +432,7 @@ return [
         'title' => '隱藏功能',
         'caption' => '而且他也不會跳出對話方塊一直吵著要你的真實姓名。事實上你根本沒辦法設定你的名字，你得一直告訴別人你是誰。',
         'height' => 3238,
-        'og' => ['image' => 'http://xkcd.tw/img/og_1305.jpg']
+        'og' => ['image' => 'https://xkcd.tw/img/og_1305.jpg']
     ],
     1301 => [
         'title' => '副檔名',

@@ -20,7 +20,7 @@ header('Cache-Control: public, max-age=3600'); // cache 1 小時
 // 取出本回資料
 $strip = $strips[$id];
 $strip['id'] = $id;
-$strip['img_url'] = @$strip['img_url'] ?: sprintf('http://xkcd.tw/strip/%d.jpg', $id);
+$strip['img_url'] = @$strip['img_url'] ?: sprintf('https://xkcd.tw/strip/%d.jpg', $id);
 
 // 拉出上一頁跟下一頁
 $strip_ids = array_keys($strips);
@@ -34,7 +34,7 @@ if ($pos < count($strip_ids)) {
 
 // OG
 $og['title'] = "xkcd 中文翻譯：" . $strip['title'];
-$og['url'] = sprintf('http://xkcd.tw/%d', $id);
+$og['url'] = sprintf('https://xkcd.tw/%d', $id);
 $og['image'] = $strip['img_url'];
 
 if (isset($strip['og'])) {

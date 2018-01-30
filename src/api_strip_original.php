@@ -4,7 +4,7 @@ header('Content-type: application/json');
 $id = explode('/', $_SERVER['REQUEST_URI'])[4];
 
 $cache_key = "api_cache_strip_original_{$id}";
-$url = "http://xkcd.com/{$id}/info.0.json";
+$url = "https://xkcd.com/{$id}/info.0.json";
 
 
 $memcache = new Memcached;

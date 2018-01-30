@@ -10,6 +10,7 @@ handlers:
 - url: /robots.txt
   static_files: public/robots.txt
   upload: public/robots.txt
+  secure: always
 
 #- url: /favicon.ico
 #  static_files: public/favicon.ico
@@ -17,44 +18,57 @@ handlers:
 
 - url: /css
   static_dir: public/css
+  secure: always
 
 - url: /img
   static_dir: public/img
+  secure: always
 
 - url: /strip
   static_dir: public/strip
+  secure: always
 
 - url: /js
   static_dir: public/js
+  secure: always
 
 ####################################################
 
 - url: /sitemap.xml
   script: src/sitemap.php
+  secure: always
 
 - url: /404/?
   script: src/xkcd404.php
+  secure: always
 
 - url: /[0-9]+/?
   script: src/strip.php
+  secure: always
 
 - url: /
   script: src/index.php
+  secure: always
 
 - url: /recommand
   script: src/recommand.php
+  secure: always
 
 - url: /api/strip/original/[0-9]+
   script: src/api_strip_original.php
+  secure: always
 
 - url: /api/recommand/[0-9]+
   script: src/api_recommand.php
+  secure: always
 
 - url: /api/list_recommand/?
   script: src/api_list_recommand.php
+  secure: always
 
 - url: /.*
   script: src/error404.php
+  secure: always
 
 ###################################################
 

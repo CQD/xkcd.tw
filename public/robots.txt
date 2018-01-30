@@ -1,3 +1,3 @@
 User-agent: *
-Sitemap: http://xkcd.tw/sitemap.xml
+Sitemap: https://xkcd.tw/sitemap.xml
 Allow: /
