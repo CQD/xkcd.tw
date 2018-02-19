@@ -1,0 +1,37 @@
+#!/usr/bin/env php
+<?php
+
+$logs = file_get_contents('https://xkcd.tw/api/list_recommand');
+$logs = strip_tags($logs);
+
+$strips = include(__DIR__ . '/../src/data/strips.php');
+
+$line = strtok($logs, "\n");
+do {
+    $row = json_decode($line, true);
+
+    $done = isset($strips[$row['strip_id']]);
+
+    printf(
+        "%s %s  %-23s %s \033[m\n",
+        $done ? "\033[0;32mDONE\033[1;30m" : "\033[1;31m TBD\033[1;37m",
+        $row['date_time'],
+        "https://xkcd.com/{$row['strip_id']}/",
+        originStrip($row['strip_id'])['safe_title']
+    );
+} while ($line = strtok("\n"));
+
+
+function originStrip($id)
+{
+    static $cache = [];
+
+    if (isset($cache[$id])) {
+        return $cache[$id];
+    }
+
+    $data = file_get_contents("https://xkcd.com/{$id}/info.0.json");
+    $data = json_decode($data, true);
+    $cache[$id] = $data;
+    return $data;
+}
