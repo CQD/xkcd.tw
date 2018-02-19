@@ -1,5 +1,3 @@
-application: sonorous-cacao-89706
-version: prod
 runtime: php55
 api_version: 1
 threadsafe: true
