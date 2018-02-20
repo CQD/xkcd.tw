@@ -9,15 +9,16 @@ $strips = include(__DIR__ . '/../src/data/strips.php');
 $line = strtok($logs, "\n");
 do {
     $row = json_decode($line, true);
+    $id = $row['strip_id'];
 
-    $done = isset($strips[$row['strip_id']]);
+    $done = isset($strips[$id]);
 
     printf(
         "%s %s  %-23s %s \033[m\n",
         $done ? "\033[0;32mDONE\033[1;30m" : "\033[1;31m TBD\033[1;37m",
         $row['date_time'],
         "https://xkcd.com/{$row['strip_id']}/",
-        originStrip($row['strip_id'])['safe_title']
+        $done ? $strips[$id]['title'] : originStrip($row['strip_id'])['safe_title']
     );
 } while ($line = strtok("\n"));
 
