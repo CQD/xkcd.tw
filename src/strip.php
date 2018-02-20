@@ -50,7 +50,6 @@ $ld = [
     "image" => $strip['img_url'],
     "sameAs" => "https://xkcd.com/{$id}",
     "inLanguage" => "zh-Hant-TW",
-    "text" => @$strip['transcript'] ?: null,
     "author" => [
         "@type" => "Person",
         "name" => "Randall Munroe",
