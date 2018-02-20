@@ -21,9 +21,26 @@ $ld = [
     ],
 ];
 
+foreach ($strips as $id => $strip) {
+    $strips[$id]['id'] = $id;
+}
+$order = @$_GET['o'] ?: 'publish';
+if ('translate' === $order) {
+    uasort($strips, function($a, $b){
+        $ta = @$a['translate_time'] ?: '1999-01-01';
+        $ta = strtotime($ta);
+        $tb = @$b['translate_time'] ?: '1999-01-01';
+        $tb = strtotime($tb);
+        return ($ta === $tb)
+            ? ($a['id'] < $b['id'] ? 1 : -1)
+            : ($ta < $tb ? 1 : -1);
+    });
+}
+
 echo $twig->render('index.twig', [
     'page_title' => '首頁',
     'strips' => $strips,
     'og' => $og,
     'ld' => $ld,
+    'order' => $order,
 ]);

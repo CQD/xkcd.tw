@@ -1,7 +1,13 @@
 {% extends "main.twig" %}
 
 {% block content %}
-<p>如果有想推薦的 xkcd 漫畫沒有列在這裡，歡迎到<a href="/recommand">推薦翻譯</a>頁面填寫。
+<p>如果有想推薦的 xkcd 漫畫沒有列在這裡，歡迎到<a href="/recommand">推薦翻譯</a>頁面填寫。<br>
+{% if order == "publish" %}
+依照原版順序排列。<a href="?o=translate">點此改為依翻譯更新順序排列</a>。
+{% else %}
+依照翻譯更新順序排列。<a href="?o=publish">點此改為依照原版順序排列</a>。
+{% endif %}
+<p>
 <div id="strip_list">
 {% for id, strip in strips %}
 <a href="/{{id}}">[{{id}}] {{strip.title}}</a><br>
