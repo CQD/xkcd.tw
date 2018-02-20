@@ -1,0 +1,30 @@
+#!/usr/bin/env php
+<?php
+$strips = include __DIR__ . '/../src/data/strips.php';
+
+foreach ($strips as $id => $strip) {
+    $file = isset($strip['img_url'])
+        ? __DIR__ . "/../public{$strip['img_url']}"
+        : __DIR__ . "/../public/strip/{$id}.jpg";
+    $strips[$id]['translate_time'] = date('Y-m-d H:i:s', filectime($file));
+    unset($strips[$id]['translate_date']);
+}
+
+$rslt = var_export($strips, true);
+
+$rslt = str_replace("=> \n  array (", '=> [', $rslt);
+$rslt = str_replace("array (", '[', $rslt);
+$rslt = str_replace("),", '],', $rslt);
+$rslt = str_replace('  ', '    ', $rslt);
+
+$rslt[strlen($rslt) - 1] = ']';
+
+$rslt = "<?php
+
+// 紀錄：
+// 1827 之後還沒看
+// 1770 ~ 1761 之間還沒看
+return {$rslt};
+";
+
+echo $rslt;
