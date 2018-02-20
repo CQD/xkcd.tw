@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+{% autoescape %}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+
+<title>{{ title }}</title>
+<description>{{ desc }}</description>
+<language>zh-tw</language>
+<link>https://xkcd.tw</link>
+<atom:link href="https://xkcd.tw/feed?f=rss" rel="self" type="application/rss+xml" />
+<docs>https://xkcd.tw/feed?f=rss</docs>
+<pubDate>{{ pub_date }}</pubDate>
+<lastBuildDate>{{ pub_date }}</lastBuildDate>
+
+{% for item in items %}
+<item>
+<title>{{ item.title }}</title>
+<description>
+<![CDATA[
+<img src="https://xkcd.tw{{ item.img_url }}" alt="{{ item.caption }}" height="{{ item.height }}" title="{{ item.caption }}">
+<p>原文：<a href="https://xkcd.com/{{item.id}}/">XKCD {{item.id}}</a>
+]]>
+</description>
+<link>https://xkcd.tw/{{ item.id }}</link>
+<guid>https://xkcd.tw/{{ item.id }}</guid>
+<pubDate>{{ item.translate_time }}</pubDate>
+</item>
+{% endfor %}
+
+{% endautoescape %}
+</channel></rss>

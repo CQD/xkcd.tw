@@ -52,6 +52,10 @@ handlers:
   script: src/recommand.php
   secure: always
 
+- url: /feed
+  script: src/feed.php
+  secure: always
+
 - url: /api/strip/original/[0-9]+
   script: src/api_strip_original.php
   secure: always

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+{% autoescape %}
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+<title>{{ title }}</title>
+<subtitle>{{ desc }}</subtitle>
+<link href="https://xkcd.tw"></link>
+<link href="https://xkcd.tw/feed" rel="self"></link>
+<id>https://xkcd.tw/feed</id>
+<updated>{{ pub_date }}</updated>
+<author><name>CQD</name></author>
+
+{% for item in items %}
+<entry>
+<title>{{ item.title }}</title>
+<summary type="html">
+<![CDATA[
+<img src="https://xkcd.tw{{ item.img_url }}" alt="{{ item.caption }}" height="{{ item.height }}" title="{{ item.caption }}">
+<p>原文：<a href="https://xkcd.com/{{item.id}}/">XKCD {{item.id}}</a>
+]]>
+</summary>
+<link href="https://xkcd.tw/{{ item.id }}"></link>
+<id>https://xkcd.tw/{{ item.id }}</id>
+<updated>{{ item.translate_time }}</updated>
+<author><name>CQD</name></author>
+</entry>
+{% endfor %}
+
+{% endautoescape %}
+</feed>
