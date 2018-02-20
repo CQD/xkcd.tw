@@ -12,6 +12,7 @@ $og = [
 $strips = include __DIR__ . '/data/strips.php';
 foreach ($strips as $id => $strip) {
     $strips[$id]['id'] = $id;
+    $strips[$id]['img_url'] = @$strip['img_url'] ?: sprintf('/strip/%d.jpg', $id);
 }
 
 //////////////////////////////////////////////

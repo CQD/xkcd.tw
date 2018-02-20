@@ -15,8 +15,6 @@ if (!isset($strips[$id])) {
 
 // 取出本回資料
 $strip = $strips[$id];
-$strip['id'] = $id;
-$strip['img_url'] = @$strip['img_url'] ?: sprintf('/strip/%d.jpg', $id);
 
 // 拉出上一頁跟下一頁
 $strip_ids = array_keys($strips);
