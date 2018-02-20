@@ -7,7 +7,8 @@ body{
 .wrapper{
     margin:0 auto;
     padding:1em;
-    max-width: 800px;
+    max-width:900px;
+    position:relative;
 }
 
 header h1{
@@ -52,7 +53,7 @@ hr {
 }
 
 #content img{
-    max-width: 90%;
+    max-width: 100%;
 }
 
 
