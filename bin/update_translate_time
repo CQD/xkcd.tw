@@ -20,10 +20,6 @@ $rslt = str_replace('  ', '    ', $rslt);
 $rslt[strlen($rslt) - 1] = ']';
 
 $rslt = "<?php
-
-// 紀錄：
-// 1827 之後還沒看
-// 1770 ~ 1761 之間還沒看
 return {$rslt};
 ";
 
