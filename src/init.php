@@ -1,12 +1,18 @@
 <?php
 include __DIR__ . '/../vendor/autoload.php';
 
+date_default_timezone_set('Asia/Taipei');
+header('Content-Type: text/html; Charset=utf-8');
+
 $twig = new \Twig_Environment(new \Twig_Loader_Filesystem(__DIR__ . '/../view'));
 
 $og = [
 ];
 
 $strips = include __DIR__ . '/data/strips.php';
+foreach ($strips as $id => $strip) {
+    $strips[$id]['id'] = $id;
+}
 
 //////////////////////////////////////////////
 

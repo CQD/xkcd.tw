@@ -18,9 +18,6 @@ $ld = [
     ],
 ];
 
-foreach ($strips as $id => $strip) {
-    $strips[$id]['id'] = $id;
-}
 $order = @$_GET['o'] ?: 'publish';
 if ('translate' === $order) {
     uasort($strips, function($a, $b){
