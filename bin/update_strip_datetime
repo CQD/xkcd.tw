@@ -1,0 +1,82 @@
+#!/usr/bin/env php
+<?php
+
+try {
+    go($argc, $argv);
+} catch (\Exception $e) {
+    say($e->getMessage(), LOG_ERR);
+    throw $e;
+}
+exit;
+
+/////////////////////////////////////////
+
+function go($argc, $argv)
+{
+    $dataFile = __DIR__ . '/../src/data/strips.php';
+
+    $strips = include($dataFile);
+
+    if ($argc <= 1) {
+        throw new \Exception("必須輸入要更新的 ID");
+    }
+    $ids = array_slice($argv, 1);
+
+    foreach ($ids as $id) {
+        $strip = @$strips[$id] ?: null;
+        if (!$strip) {
+            throw new \Exception("沒有 ID 為 `{$id}` 的資料！");
+        }
+
+        say("更新 {$id}");
+
+        // 更新原文時間
+        $data = json_decode(file_get_contents("https://xkcd.com/{$id}/info.0.json"), true);
+        if (!$data) {
+            throw new \Exception("沒辦法從 xkcd.com 拉到 ID 為 `{$id}` 的資料");
+        }
+
+        $strips[$id]['date'] = sprintf("%s-%s-%s", $data['year'], $data['month'], $data['day']);
+
+        // 更新翻譯時間
+        $file = isset($strip['img_url'])
+            ? __DIR__ . "/../public{$strip['img_url']}"
+            : __DIR__ . "/../public/strip/{$id}.jpg";
+        $strips[$id]['translate_time'] = date('Y-m-d H:i:s', filectime($file));
+    }
+
+    $rslt = var_export($strips, true);
+
+    $rslt = str_replace("=> \n  array (", '=> [', $rslt);
+    $rslt = str_replace("array (", '[', $rslt);
+    $rslt = str_replace("),", '],', $rslt);
+    $rslt = str_replace('  ', '    ', $rslt);
+
+    $rslt[strlen($rslt) - 1] = ']';
+
+    $rslt = "<?php
+return {$rslt};
+";
+
+    say("存檔");
+    file_put_contents($dataFile, $rslt);
+}
+
+//////////////////////////////////////////
+
+function say($msg, $level = LOG_INFO)
+{
+    $color = '';
+    if (LOG_ERR === $level) {
+        $color = '1;31';
+    }
+    fputs(STDERR,
+        sprintf(
+            "\033[1;32m[%s]\033[%sm %s\033[m\n",
+            date('Y-m-d H:i:s'),
+            $color,
+            $msg
+        )
+    );
+}
+
