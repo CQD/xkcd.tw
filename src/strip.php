@@ -79,7 +79,7 @@ header("ETag: " . md5($etagBase));
 header('Cache-Control: public, max-age=3600'); // cache 1 小時
 
 // 輸出
-echo $twig->render('strip.twig', [
+echo $twig->render(@$strip['template'] ?: 'strip.twig', [
     'page_title' => $strip['title'],
     'strip' => $strip,
     'og' => $og,
