@@ -13,10 +13,6 @@ if (!isset($strips[$id])) {
     die404("你要看的東西我還沒翻譯到，傷心，真傷心...");
 }
 
-// cache
-header("ETag: " . md5('xkcd.tw.strip.' . $id . date('Y-m-d')));
-header('Cache-Control: public, max-age=3600'); // cache 1 小時
-
 // 取出本回資料
 $strip = $strips[$id];
 $strip['id'] = $id;
@@ -73,6 +69,17 @@ $ld = [
     ],
 ];
 $ld = array_filter($ld);
+
+// cache
+$etagBase = sprintf(
+    "xkcd.tw.strip.%s.%s.%s.%s",
+    $id,
+    @$strip['prev_id'] ?: '',
+    @$strip['next_id'] ?: '',
+    $strip['translate_time']
+);
+header("ETag: " . md5($etagBase));
+header('Cache-Control: public, max-age=3600'); // cache 1 小時
 
 // 輸出
 echo $twig->render('strip.twig', [
