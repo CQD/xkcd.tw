@@ -19,6 +19,9 @@ uasort($strips, function($a, $b){
 $strips = array_slice($strips, 0, 50);
 foreach ($strips as $id => $strip) {
     $strips[$id]['translate_time'] = formatTime($strip['translate_time'], $format);
+    if (1110 == $strip['id']) {
+        $strips[$id]['img_url'] = '/img/og_1110.png';
+    }
 }
 $finalUpdateTime = reset($strips)['translate_time'];
 
