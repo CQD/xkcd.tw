@@ -30,6 +30,10 @@ handlers:
   static_dir: public/js
   secure: always
 
+- url: /s
+  static_dir: public/s
+  secure: always
+
 ####################################################
 
 - url: /sitemap.xml
