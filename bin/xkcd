@@ -1,0 +1,40 @@
+#!/usr/bin/env php
+<?php
+
+if ($argc <= 1) {
+    echo "使用方法：
+ - xkcd \033[1;30mstrip id [meta|img]\033[m
+";
+    exit;
+}
+
+$id = (int) $argv[1];
+$action = @ $argv[2] ?: 'meta';
+$meta = file_get_contents("https://xkcd.com/{$id}/info.0.json");
+
+if (!$meta) {
+    echo "撈不到 xkcd:{$id} 的資料 /__\\\n";
+    exit;
+}
+$meta = json_decode($meta, true);
+
+if ($meta['year'] && $meta['day'] && $meta['month']) {
+    $meta['date'] = "{$meta['year']} - {$meta['month']} - {$meta['day']}";
+    unset($meta['year']);
+    unset($meta['month']);
+    unset($meta['day']);
+}
+
+echo json_encode($meta, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES), "\n";
+
+
+if ('img' === $action) {
+    if (!isset($meta['img'])) {
+        echo "沒有 img 沒辦法拉圖檔!!\n";
+    } else {
+        $imgUrl = $meta['img'];
+        $fileName = basename($imgUrl);
+        file_put_contents($fileName, file_get_contents($imgUrl));
+        echo "圖檔已存為 {$fileName}\n";
+    }
+}
