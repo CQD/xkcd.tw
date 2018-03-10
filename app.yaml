@@ -94,4 +94,5 @@ skip_files:
 - ^(.*/)?\..*$
 - asset/
 - doc/
+- bin/
 - .git/
