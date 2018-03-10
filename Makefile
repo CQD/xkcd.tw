@@ -7,6 +7,10 @@ installWithDev:
 	-composer install -o
 
 deploy: installNoDev
+	-rm -rf vendor/*/*/tests
+	-rm -rf vendor/*/*/test
+	-rm -rf vendor/*/*/docs
+	-rm -rf vendor/*/*/doc
 	-gcloud app deploy -v 'prod'  --project='sonorous-cacao-89706'
 
 test: installWithDev
