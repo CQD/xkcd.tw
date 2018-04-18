@@ -1,26 +1,26 @@
 .PHONY: deploy installNoDev installWithDev test server e2e
 
 installNoDev:
-	-composer install -o --no-dev
+	composer install -o --no-dev
 
 installWithDev:
-	-composer install -o
+	composer install -o
 
 deploy: installNoDev
 	-rm -rf vendor/*/*/tests
 	-rm -rf vendor/*/*/test
 	-rm -rf vendor/*/*/docs
 	-rm -rf vendor/*/*/doc
-	-gcloud app deploy -v 'prod'  --project='sonorous-cacao-89706'
+	gcloud app deploy -v 'prod'  --project='sonorous-cacao-89706'
 
 test: installWithDev
-	-./vendor/bin/phpunit --coverage-html build/coverage/
+	./vendor/bin/phpunit --coverage-html build/coverage/
 
 server: installWithDev
-	-dev_appserver.py app.yaml -A 'local-dev-app-id'
+	dev_appserver.py app.yaml -A 'local-dev-app-id'
 
 e2e: installWithDev
-	-{ dev_appserver.py app.yaml -A 'local-dev-app-id' --datastore_path=':memory:' --logs_path=':memory:' 2> build/server.log & }; \
+	{ dev_appserver.py app.yaml -A 'local-dev-app-id' --datastore_path=':memory:' --logs_path=':memory:' 2> build/server.log & }; \
 		pid=$$! ; \
 		sleep 2 ; \
 		echo "kill -0 $$pid" ; \
