@@ -12,11 +12,7 @@ $og = [
 $strips = include __DIR__ . '/data/strips.php';
 foreach ($strips as $id => $strip) {
     $strips[$id]['id'] = $id;
-    if (!isset($strip['img_url'])) {
-          $strips[$id]['img_url'] = is_file(__DIR__ . "/../public/strip/{$id}.png")
-              ? "/strip/{$id}.png"
-              : "/strip/{$id}.jpg";
-    }
+    $strips[$id]['img_url'] = @$strip['img_url'] ?: sprintf('/strip/%d.jpg', $id);
 }
 
 //////////////////////////////////////////////
