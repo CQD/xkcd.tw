@@ -6,7 +6,6 @@ return [
         'height' => 260,
         'date' => '2018-03-19',
         'translate_time' => '2018-04-19 02:55:59',
-        'img_url' => '/strip/1969.png',
     ],
     1966 => [
         'title' => '智慧家庭安全性',
@@ -14,7 +13,6 @@ return [
         'height' => 373,
         'date' => '2018-03-12',
         'translate_time' => '2018-04-19 03:08:23',
-        'img_url' => '/strip/1966.png',
     ],
     1935 => [
         'title' => '2018',
@@ -29,7 +27,6 @@ return [
         'height' => 711,
         'date' => '2017-12-27',
         'translate_time' => '2018-04-18 01:50:34',
-        'img_url' => '/strip/1934.png',
     ],
     1931 => [
         'title' => '虛擬助手',
@@ -58,7 +55,6 @@ return [
         'height' => 286,
         'date' => '2017-7-21',
         'translate_time' => '2018-04-17 21:42:33',
-        'img_url' => '/strip/1866.png',
     ],
     1865 => [
         'title' => 'Wifi vs 行動網路',
@@ -66,7 +62,6 @@ return [
         'height' => 272,
         'date' => '2017-7-19',
         'translate_time' => '2018-03-10 11:22:33',
-        'img_url' => '/strip/1865.png',
     ],
     1858 => [
         'title' => '七月四日',
@@ -81,7 +76,6 @@ return [
         'height' => 371,
         'date' => '2017-6-19',
         'translate_time' => '2018-04-18 02:18:03',
-        'img_url' => '/strip/1852.png',
     ],
     1845 => [
         'title' => '各州文字地圖',
@@ -573,7 +567,6 @@ return [
         'height' => 312,
         'date' => '2016-1-8',
         'translate_time' => '2018-03-10 11:09:39',
-        'img_url' => '/strip/1627.png',
         'comment' => '原文是 woosh，這中文我真不知道怎麼翻...',
     ],
     1613 => [
@@ -673,7 +666,6 @@ return [
         'height' => 410,
         'date' => '2014-10-08',
         'translate_time' => '2018-03-10 10:51:03',
-        'img_url' => '/strip/1431.png',
     ],
     1425 => [
         'title' => '工作項目',
@@ -943,7 +935,6 @@ return [
         'title' => '點圖拖放',
         'caption' => '點圖拖放',
         'height' => 694,
-        'img_url' => '/strip/1110.png',
         'og' => 
         [
             'image' => 'https://xkcd.tw/img/og_1110.png',
@@ -1004,7 +995,6 @@ return [
     961 => [
         'title' => '永恆之火',
         'caption' => '懷抱希望，只要等得夠久，說不定海灘球就會消失，卡住的畫面會回來。',
-        'img_url' => '/strip/961.gif',
         'height' => 223,
         'date' => '2011-10-6',
         'translate_time' => '2016-03-28 20:26:19',
@@ -1173,7 +1163,6 @@ return [
     457 => [
         'title' => '挫折',
         'caption' => '「別擔心，我花不到一分鐘就能解決」「是的，我注意到了」',
-        'img_url' => '/strip/457.png',
         'height' => 279,
         'date' => '2008-8-1',
         'translate_time' => '2016-04-13 00:56:55',
@@ -1365,7 +1354,6 @@ return [
         'title' => '桶子之五',
         'caption' => 'Too good not to happen.',
         'height' => 715,
-        'img_url' => '/strip/31.jpg',
         'date' => '2006-1-1',
         'translate_time' => '2018-02-19 18:58:30',
     ],
@@ -1373,7 +1361,6 @@ return [
         'title' => '桶子之四',
         'caption' => ':(',
         'height' => 433,
-        'img_url' => '/strip/25.jpg',
         'date' => '2006-1-1',
         'translate_time' => '2018-02-19 18:56:35',
     ],
@@ -1381,7 +1368,6 @@ return [
         'title' => '桶子之三',
         'caption' => '是漩渦！',
         'height' => 252,
-        'img_url' => '/strip/22.jpg',
         'date' => '2006-1-1',
         'translate_time' => '2018-02-19 18:55:06',
     ],
@@ -1389,7 +1375,6 @@ return [
         'title' => '雪貂',
         'caption' => '我的弟弟有隻雪貂，我畫完這篇之後死掉了。RIP。',
         'height' => 1307,
-        'img_url' => '/strip/20.jpg',
         'date' => '2006-1-1',
         'translate_time' => '2018-02-19 18:53:09',
     ],
@@ -1397,7 +1382,6 @@ return [
         'title' => '桶子之二',
         'caption' => '啊啊啊',
         'height' => 488,
-        'img_url' => '/strip/11.jpg',
         'date' => '2006-1-1',
         'translate_time' => '2018-02-19 18:47:35',
     ],
@@ -1405,7 +1389,6 @@ return [
         'title' => '桶子之一',
         'caption' => '我們都一樣',
         'height' => 311,
-        'img_url' => '/strip/1.jpg',
         'date' => '2006-1-1',
         'translate_time' => '2018-02-19 18:10:11',
     ],

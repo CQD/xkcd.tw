@@ -10,9 +10,10 @@ $og = [
 ];
 
 $strips = include __DIR__ . '/data/strips.php';
+$imageMap = include __DIR__ . '/../build/image_map.php';
 foreach ($strips as $id => $strip) {
     $strips[$id]['id'] = $id;
-    $strips[$id]['img_url'] = @$strip['img_url'] ?: sprintf('/strip/%d.jpg', $id);
+    $strips[$id]['img_url'] = @$strips[$id]['img_url'] ?: "/strip/{$imageMap[$id]}";
 }
 
 //////////////////////////////////////////////
