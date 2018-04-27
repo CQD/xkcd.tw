@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+
+$map = [];
+
+$files = scandir(__DIR__ . "/../public/strip");
+foreach ($files as $file) {
+    $id = (int) $file;
+    if ($id > 0) {
+        $map[$id] = $file;
+    }
+}
+$content = "<?php return " . var_export($map, true) . ";";
+
+$baseDir = __DIR__ . '/../build';
+@mkdir($baseDir, 0755, true);
+file_put_contents("{$baseDir}/image_map.php", $content);

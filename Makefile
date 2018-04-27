@@ -1,25 +1,30 @@
 .PHONY: deploy installNoDev installWithDev test server e2e
 
+STRIP_IMAGES = $(wilcard public/strip/*.*)
+
 installNoDev:
 	composer install -o --no-dev
 
 installWithDev:
 	composer install -o
 
-deploy: installNoDev
+build/image_map.php: ${STRIP_IMAGES}
+	bin/build_image_map
+
+deploy: installNoDev build/image_map.php
 	-rm -rf vendor/*/*/tests
 	-rm -rf vendor/*/*/test
 	-rm -rf vendor/*/*/docs
 	-rm -rf vendor/*/*/doc
 	gcloud app deploy -v 'prod'  --project='sonorous-cacao-89706'
 
-test: installWithDev
+test: installWithDev build/image_map.php
 	./vendor/bin/phpunit --coverage-html build/coverage/
 
-server: installWithDev
+server: installWithDev build/image_map.php
 	dev_appserver.py app.yaml -A 'local-dev-app-id'
 
-e2e: installWithDev
+e2e: installWithDev build/image_map.php
 	{ dev_appserver.py app.yaml -A 'local-dev-app-id' --datastore_path=':memory:' --logs_path=':memory:' 2> build/server.log & }; \
 		pid=$$! ; \
 		sleep 2 ; \
