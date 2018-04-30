@@ -1016,7 +1016,7 @@ return [
     927 => [
         'title' => '標準規範',
         'caption' => '還好，充電的標準已經統一成大家全部用 mini-USB。等等是 micro-USB？ 靠腰..',
-        'height' => 283,
+        'height' => 292,
         'date' => '2011-7-20',
         'translate_time' => '2016-08-28 02:10:37',
     ],
