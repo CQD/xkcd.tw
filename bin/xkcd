@@ -19,7 +19,7 @@ if (!$meta) {
 $meta = json_decode($meta, true);
 
 if ($meta['year'] && $meta['day'] && $meta['month']) {
-    $meta['date'] = "{$meta['year']} - {$meta['month']} - {$meta['day']}";
+    $meta['date'] = "{$meta['year']}-{$meta['month']}-{$meta['day']}";
     unset($meta['year']);
     unset($meta['month']);
     unset($meta['day']);
