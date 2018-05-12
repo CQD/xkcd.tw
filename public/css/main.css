@@ -67,6 +67,20 @@ footer{
   -webkit-columns: 250px 3;
      -moz-columns: 250px 3;
           columns: 250px 3;
+  text-align:left;
+  margin-left:4em;
+}
+#strip_list span{
+    display:inline-block;
+    width:5ex;
+    margin-right:0.3em;
+    opacity:0.4;
+}
+#strip_list span:before{
+    content:"[";
+}
+#strip_list span:after{
+    content:"]";
 }
 
 a:link, a:visited{
