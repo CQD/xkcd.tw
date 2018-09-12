@@ -1,27 +1,76 @@
 #!/usr/bin/env php
 <?php
 
-$logs = file_get_contents('https://xkcd.tw/api/list_recommand');
-$logs = strip_tags($logs);
+$strips = getAllRecommandedStrips();
+$strips = fillTranslatedStrips($strips);
 
-$strips = include(__DIR__ . '/../src/data/strips.php');
+output($strips);
 
-$line = strtok($logs, "\n");
-do {
-    $row = json_decode($line, true);
-    $id = $row['strip_id'];
+$reset = "\033[" . count($strips) . "A";
+foreach ($strips as $id => $strip) {
+    if ($strip['translated']) {
+        continue;
+    }
+    $strips[$id]['title'] = $strips[$id]['title'] ?: originStrip($id)['safe_title'];
+    echo $reset;
+    output($strips);
+}
 
-    $done = isset($strips[$id]);
+////////////////////////////////////////////////
 
-    printf(
-        "%s %s  %-23s %s \033[m\n",
-        $done ? "\033[0;32mDONE\033[1;30m" : "\033[1;31m TBD\033[1;37m",
-        $row['date_time'],
-        "https://xkcd.com/{$row['strip_id']}/",
-        $done ? $strips[$id]['title'] : originStrip($row['strip_id'])['safe_title']
-    );
-} while ($line = strtok("\n"));
+function getAllRecommandedStrips()
+{
+    $logs = file_get_contents('https://xkcd.tw/api/list_recommand');
+    $logs = strip_tags($logs);
 
+    $data = [];
+
+    $line = strtok($logs, "\n");
+    do {
+        $row = json_decode($line, true);
+        $id = $row['strip_id'];
+        $userId = userId($row);
+
+        $data[$id]['id'] = $id;
+        $data[$id]['title'] = '';
+        $data[$id]['date_time'] = $row['date_time'];
+        $data[$id]['translated'] = false;
+        $data[$id]['users'][$userId] = $userId;
+
+    } while ($line = strtok("\n"));
+
+    return $data;
+}
+
+function userId($row)
+{
+    $cookie = $row['http_cookie'] ? parseCookie($row['http_cookie']) : [];
+    return $cookie['_ga'] ?? $cookie['_gid'] ?? $row['renote_addr'];
+}
+
+function parseCookie($cookieStr)
+{
+    $cookie = [];
+
+    foreach (explode(';', $cookieStr) as $row) {
+        list($field, $value) = explode('=', trim($row), 2);
+        $cookie[$field] = $value;
+    }
+
+    return $cookie;
+}
+
+function fillTranslatedStrips($strips)
+{
+    $knownStrips = include(__DIR__ . '/../src/data/strips.php');
+    foreach ($strips as $id => $strip) {
+        if (isset($knownStrips[$id])) {
+            $strips[$id]['translated'] = true;
+            $strips[$id]['title'] = $knownStrips[$id]['title'];
+        }
+    }
+    return $strips;
+}
 
 function originStrip($id)
 {
@@ -35,4 +84,18 @@ function originStrip($id)
     $data = json_decode($data, true);
     $cache[$id] = $data;
     return $data;
+}
+
+function output($strips)
+{
+    foreach ($strips as $id => $strip) {
+        printf(
+            "%s %s %d %-23s %s \033[m\n",
+            $strip['translated'] ? "\033[0;32mDONE\033[1;30m" : "\033[1;31m TBD\033[1;37m",
+            $strip['date_time'],
+            count($strip['users']),
+            "https://xkcd.com/{$id}/",
+            $strip['title']
+        );
+    }
 }
