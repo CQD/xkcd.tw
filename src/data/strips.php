@@ -1133,6 +1133,7 @@ return [
         'height' => 601,
         'date' => '2011-8-10',
         'translate_time' => '2016-03-23 21:20:23',
+        'comment' => '譯者：我依照這篇做了個<a href="/s/936_password_generator.html">密碼產生器</a>',
     ],
     932 => [
         'title' => 'CIA',
