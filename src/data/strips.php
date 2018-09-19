@@ -1309,6 +1309,10 @@ return [
         'height' => 1603,
         'date' => '2008-11-17',
         'translate_time' => '2018-09-13 19:50:51',
+        'og' =>
+        [
+            'image' => 'https://xkcd.tw/img/og_505.png',
+        ],
     ],
     503 => [
         'title' => '用詞',
