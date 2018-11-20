@@ -22,7 +22,7 @@ test: installWithDev build/image_map.php
 	./vendor/bin/phpunit --coverage-html build/coverage/
 
 server: installWithDev build/image_map.php
-	dev_appserver.py app.yaml -A 'local-dev-app-id'
+	php -S localhost:8080 -t public/
 
 e2e: installWithDev build/image_map.php
 	{ dev_appserver.py app.yaml -A 'local-dev-app-id' --datastore_path=':memory:' --logs_path=':memory:' 2> build/server.log & }; \
