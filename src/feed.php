@@ -1,6 +1,4 @@
 <?php
-include __DIR__ . '/init.php';
-
 $format = @$_GET['f'] ?: 'atom';
 $format = strtolower($format);
 

@@ -1,6 +1,4 @@
 <?php
-include __DIR__ . '/init.php';
-
 $id_str = trim($_SERVER['REQUEST_URI'], '/');
 $id = (int) $id_str;
 
@@ -19,12 +17,8 @@ $strip = $strips[$id];
 // 拉出上一頁跟下一頁
 $strip_ids = array_keys($strips);
 $pos = array_search($id, $strip_ids);
-if ($pos > 0) {
-    $strip['next_id'] = $strip_ids[$pos - 1];
-}
-if ($pos < count($strip_ids)) {
-    $strip['prev_id'] = $strip_ids[$pos + 1];
-}
+$strip['next_id'] = $strip_ids[$pos - 1] ?? null;
+$strip['prev_id'] = $strip_ids[$pos + 1] ?? null;
 
 // OG
 $og['title'] = "xkcd 中文翻譯：" . $strip['title'];
@@ -71,8 +65,8 @@ $ld = array_filter($ld);
 $etagBase = sprintf(
     "xkcd.tw.strip.%s.%s.%s.%s",
     $id,
-    @$strip['prev_id'] ?: '',
-    @$strip['next_id'] ?: '',
+    $strip['prev_id'] ?: '',
+    $strip['next_id'] ?: '',
     $strip['translate_time']
 );
 header("ETag: " . md5($etagBase));

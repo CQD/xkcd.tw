@@ -1,6 +1,4 @@
 <?php
-include __DIR__ . '/init.php';
-
 $og['title'] = '推薦翻譯';
 $og['url'] = 'https://xkcd.tw/recommand';
 
