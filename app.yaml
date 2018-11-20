@@ -1,6 +1,4 @@
-runtime: php55
-api_version: 1
-threadsafe: true
+runtime: php72
 
 handlers:
 ###################################################
@@ -32,48 +30,6 @@ handlers:
 
 - url: /s
   static_dir: public/s
-  secure: always
-
-####################################################
-
-- url: /sitemap.xml
-  script: src/sitemap.php
-  secure: always
-
-- url: /404/?
-  script: src/xkcd404.php
-  secure: always
-
-- url: /[0-9]+/?
-  script: src/strip.php
-  secure: always
-
-- url: /
-  script: src/index.php
-  secure: always
-
-- url: /recommand
-  script: src/recommand.php
-  secure: always
-
-- url: /feed
-  script: src/feed.php
-  secure: always
-
-- url: /api/strip/original/[0-9]+
-  script: src/api_strip_original.php
-  secure: always
-
-- url: /api/recommand/[0-9]+
-  script: src/api_recommand.php
-  secure: always
-
-- url: /api/list_recommand/?
-  script: src/api_list_recommand.php
-  secure: always
-
-- url: /.*
-  script: src/error404.php
   secure: always
 
 ###################################################
