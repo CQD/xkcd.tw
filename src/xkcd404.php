@@ -1,6 +1,4 @@
 <?php
-include __DIR__ . '/init.php';
-
 if ('/' === substr($_SERVER['REQUEST_URI'], -1)) {
     header("Location: /404");
     exit;

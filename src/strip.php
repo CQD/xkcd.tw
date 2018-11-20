@@ -1,6 +1,4 @@
 <?php
-include __DIR__ . '/init.php';
-
 $id_str = trim($_SERVER['REQUEST_URI'], '/');
 $id = (int) $id_str;
 
