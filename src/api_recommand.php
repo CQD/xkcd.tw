@@ -1,4 +1,9 @@
 <PRE><?php
+
+use Google\Cloud\Storage\StorageClient;
+
+(new StorageClient())->registerStreamWrapper();
+
 $log_file_name = 'gs://xkcd-tw/recommand.log';
 
 $id = explode('/', $_SERVER['REQUEST_URI'])[3];
