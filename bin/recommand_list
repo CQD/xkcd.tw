@@ -1,8 +1,16 @@
 #!/usr/bin/env php
 <?php
 
+$options = getOptions();
+
 $strips = getAllRecommandedStrips();
 $strips = fillTranslatedStrips($strips);
+
+if (!$options['showall']) {
+    $strips = array_filter($strips, function($s){
+        return !$s['translated'];
+    });
+}
 
 output($strips);
 
@@ -98,4 +106,20 @@ function output($strips)
             $strip['title']
         );
     }
+}
+
+function getOptions()
+{
+    $o = getopt('a');
+
+    $flagMap = [
+        'a' => ['showall', false],
+    ];
+
+    $options = [];
+    foreach ($flagMap as $key => list($name, $defaultValue)) {
+        $options[$name] = isset($o[$key]) ? true : $defaultValue;
+    }
+
+    return $options;
 }
