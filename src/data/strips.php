@@ -1517,6 +1517,7 @@ return [
         'height' => 175,
         'date' => '2007-9-10',
         'translate_time' => '2018-12-01 20:21:31',
+        'comment' => '譯者：我依照這篇做了個<a href="/s/314_date_calculator.html">年齡範圍計算機</a>',
     ],
     308 => [
         'title' => '特別的人生',
