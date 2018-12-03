@@ -1,5 +1,7 @@
 <?php
 
+spamBlock();
+
 include __DIR__ . '/../vendor/autoload.php';
 
 date_default_timezone_set('Asia/Taipei');
@@ -78,4 +80,19 @@ function die404($msg = "找不到這一頁，真傷心")
        'msg' => $msg,
     ]);
     die();
+}
+
+function spamBlock()
+{
+    if (!isset($_SERVER['HTTP_REFERER'])) {
+        return;
+    }
+
+    $referer = $_SERVER['HTTP_REFERER'];
+
+    if (false !== strpos($referer, '-seo-') || false !== strpos($referer, '-seo.')) {
+        http_response_code(404);
+        echo '404';
+        exit;
+    }
 }
