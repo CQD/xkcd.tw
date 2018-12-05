@@ -875,7 +875,7 @@ return [
     1409 => [
         'title' => '查詢',
         'caption' => 'SELECT * FROM GHOSTS',
-        'height' => 3006,
+        'height' => 1503,
         'date' => '2014-8-18',
         'translate_time' => '2018-02-20 16:33:48',
     ],
