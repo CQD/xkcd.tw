@@ -953,6 +953,13 @@ return [
         'date' => '2013-12-9',
         'translate_time' => '2017-07-31 10:23:25',
     ],
+    1296 => [
+        'title' => 'git commit',
+        'caption' => "Merge branch 'asdfasjkfdlas/alkdjf' into sdkjfls-final",
+        'height' => 250,
+        'date' => '2013-11-27',
+        'translate_time' => '2018-12-12 23:54:20',
+    ],
     1295 => [
         'title' => '新研究',
         'caption' => '當研究正式出版之後，沒人知道新聞還會不會去報導他們。',
@@ -1115,6 +1122,13 @@ return [
         'date' => '2013-2-15',
         'translate_time' => '2016-03-28 20:26:15',
     ],
+    1172 => [
+        'title' => '工作流程',
+        'caption' => '可能有小孩子冬天要靠按著空白鍵取暖，你這殺小孩兇手！',
+        'height' => 381,
+        'date' => '2013-2-11',
+        'translate_time' => '2018-12-13 00:41:07',
+    ],
     1168 => [
         'title' => 'TAR',
         'caption' => '不知道哪一點比較糟：用了十五年我依然沒辦法直接記住 tar 的 flag 要怎麼下，或是在十五年的科技進步之後我還是得搞這些當年就已經十五歲的 tar flag',
@@ -1135,6 +1149,13 @@ return [
         'height' => 57,
         'date' => '2012-12-7',
         'translate_time' => '2016-03-25 20:03:08',
+    ],
+    1115 => [
+        'title' => '天空',
+        'caption' => '我掉了一隻鳥下去，沒聽見撞到底的聲音。',
+        'height' => 253,
+        'date' => '2012-10-01',
+        'translate_time' => '2018-12-13 00:45:30',
     ],
     1110 => [
         'title' => '點圖拖放',
@@ -1161,6 +1182,14 @@ return [
         'height' => 310,
         'date' => '2012-8-22',
         'translate_time' => '2016-03-25 00:46:32',
+    ],
+    1091 => [
+        'title' => '好奇號',
+        'caption' => '寫這篇的時候 NASA/JPL 的網站還是滿載的，改試著下載 CURIOSITY-REAR-CAM_[256px_x_256px].torrent.SwEsUb.DVDRip.XviD-aXXo.jpg',
+        'height' => 407,
+        'date' => '2012-08-06',
+        'translate_time' => '2018-12-13 00:58:35',
+        'comment' => '好奇號於 2012-08-06 05:17 UTC 降落於火星表面',
     ],
     1053 => [
         'title' => '一萬',
@@ -1482,6 +1511,13 @@ return [
         'date' => '2008-2-1',
         'translate_time' => '2017-07-31 10:23:25',
     ],
+    356 => [
+        'title' => '獵阿宅',
+        'caption' => '我第一次看到這題是 Google 實驗室能力測驗。我跟一個教授寫滿整面黑板但一點進度都沒有。好好享受。',
+        'height' => 371,
+        'date' => '2007-12-12',
+        'translate_time' => '2018-12-13 00:22:12',
+    ],
     355 => [
         'title' => '一對',
         'caption' => '臉書定義了人際關係。「我們本來昨晚會分手的，但是網路連不上」',
@@ -1623,6 +1659,13 @@ return [
         'height' => 439,
         'date' => '2007-3-5',
         'translate_time' => '2016-04-12 23:58:56',
+    ],
+    221 => [
+        'title' => '隨機數',
+        'caption' => 'RFC 1149.5 明定 4 是 IEEE 審定過的隨機數',
+        'height' => 144,
+        'date' => '2007-02-09',
+        'translate_time' => '2018-12-13 00:52:11',
     ],
     208 => [
         'title' => '正規表示式',
