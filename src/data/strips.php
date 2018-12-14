@@ -1607,7 +1607,7 @@ return [
     305 => [
         'title' => '第 34 條法則',
         'caption' => 'Lance，想進入大學盃比賽的話，試著拼 "Throbbing" 這個字。',
-        'height' => 360,
+        'height' =>  172,
         'date' => '2007-8-20',
         'translate_time' => '2017-07-31 10:23:25',
     ],
