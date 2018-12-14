@@ -564,7 +564,7 @@ return [
     1755 => [
         'title' => '舊時光',
         'caption' => 'Lot of drama in those days, including constant efforts to force the &quot;Reflections on Trusting Trust&quot; guy into retirement so we could stop being so paranoid about compilers.',
-        'height' => 530,
+        'height' => 490,
         'date' => '2016-11-4',
         'translate_time' => '2016-11-27 00:20:48',
     ],
