@@ -1,6 +1,6 @@
 .PHONY: deploy installNoDev installWithDev server
 
-STRIP_IMAGES = $(wilcard public/strip/*.*)
+STRIP_IMAGES = $(wildcard public/strip/*.*)
 
 installNoDev:
 	composer install -o --no-dev
