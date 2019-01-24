@@ -2,9 +2,9 @@
 <?php
 
 if ($argc <= 1) {
-    echo "使用方法：
+    fputs(STDERR, "使用方法：
  - xkcd \033[1;30mstrip id [meta|img]\033[m
-";
+");
     exit;
 }
 
@@ -13,7 +13,7 @@ $action = @ $argv[2] ?: 'meta';
 $meta = file_get_contents("https://xkcd.com/{$id}/info.0.json");
 
 if (!$meta) {
-    echo "撈不到 xkcd:{$id} 的資料 /__\\\n";
+    fputs(STDERR, "撈不到 xkcd:{$id} 的資料 /__\\\n");
     exit;
 }
 $meta = json_decode($meta, true);
@@ -30,11 +30,13 @@ echo json_encode($meta, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_
 
 if ('img' === $action) {
     if (!isset($meta['img'])) {
-        echo "沒有 img 沒辦法拉圖檔!!\n";
+        fputs(STDERR, "沒有 img 沒辦法拉圖檔!!\n");
     } else {
         $imgUrl = $meta['img'];
-        $fileName = basename($imgUrl);
-        file_put_contents($fileName, file_get_contents($imgUrl));
-        echo "圖檔已存為 {$fileName}\n";
+        if ($id >= 1063) {
+            $imgUrl = str_replace(['.png','.jpg'], ['_2x.png', '_2x.jpg'], $imgUrl);
+        }
+        $fileName = $id . "_" . basename($imgUrl);
+        shell_exec("bash -c \"wget {$imgUrl} -O {$fileName} && echo 圖檔已存為 {$fileName} >&2 || echo {$imgUrl} 儲存失敗 >&2\" ");
     }
 }
