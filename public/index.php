@@ -44,6 +44,7 @@ function staticRoute($path)
         '/404/'                 => 'xkcd404.php',
         '/api/list_recommand'   => 'api_list_recommand.php',
         '/api/list_recommand/'  => 'api_list_recommand.php',
+        '/api/strip'            => 'api_strip.php',
     ];
 
     return $map[$path] ?? false;
