@@ -29,14 +29,17 @@ $(function() {
         }
     }
 
-    let stripRender = function(argv){
-        term.echo('以後會顯示 stript ' + argv[0])
-        runCommand('image')
-    }
-
-    for (let i = 1; i < 200; i++) {
-        filesystem.strips[i.toString()] = stripRender
-    }
+    let strips = {}
+    $.get('/api/strip', function(d){
+        strips = d
+        for (id in d) {
+            let strip = d[id]
+            filesystem.strips[id.toString()] = function(){
+                term.echo(`[${strip.id}] ${strip.title}`)
+                runCommand('image', ['image', strip.img_url])
+            }
+        }
+    })
 
     let getFilesystem = function(path){
         path = normalizePath(path)
@@ -391,7 +394,23 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
         'uname': 'Illudium Q-36 Explosive Space Modulator',
         'whoami': 'https://www.google.com.tw/search?q=%E5%A4%B1%E6%99%BA\n趁早認識失智症，你還有救',
         'cqd': '做你現在看到的東西的傢伙 => https://cqd.tw',
-        'xkcd': '某個畫的漫畫很純的美國人 => https://xkcd.com',
+        'xkcd': function(argv) {
+            if (!argv[1]) {
+                term.echo('某個畫的漫畫很純的美國人 => https://xkcd.com')
+                return
+            }
+
+            let file = `~/strips/${argv[1]}`
+            let id = argv[1]
+
+            if (getFilesystem(file)) {
+                runCommand(file, [file])
+            } else if ('404' === id) {
+                term.echo('xkcd 沒有 404 漫畫，只有 404 找不到')
+            } else {
+                term.echo(`我手上沒有 xkcd ${id} 的中文翻譯`)
+            }
+        },
         'commandnotfound': function(argv) {
             let cmd = getFilesystem(argv[0])
             if (cmd && typeof cmd == 'function') {
@@ -400,8 +419,8 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
                 term.echo(argv[0] + ": 找不到這個指令")
             }
         },
-        'image': function(){
-            term.echo('<img src="https://xkcd.tw/strip/2079.png">', {raw:true})
+        'image': function(argv){
+            term.echo(`<img src="${argv[1]}">`, {raw:true}) // XXX 對這裡有 injection 我還沒想到怎麼解決...
         }
     }
 
