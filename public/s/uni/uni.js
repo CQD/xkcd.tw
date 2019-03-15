@@ -21,7 +21,7 @@ $(function() {
 
     let filesystem = {
         'welcome.txt': '歡迎使用 unixkcd-tw 主控台\n\n`strips/{id}` 可以看指定的漫畫\n`ls strips` 可以看到漫畫清單\n\n用 `ls` `cd` `cat` 可以瀏覽檔案系統\n',
-        'why.txt': 'https://uni.xkcd.com <= 這是某一年的愚人節玩笑\n不過原版好像不會動了，哭',
+        'why.txt': 'https://uni.xkcd.com <= 這是某一年的愚人節玩笑',
         'strips' : {
         },
         'bin': {
