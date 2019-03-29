@@ -54,7 +54,7 @@
 <img id="preloader" style="position:absolute;left:-10000px" alt="" src="">
 
 <script type="text/javascript"><!--
-
+textFrames = window.textFrames || {} // will be populated
 progress = document.getElementById('progress')
 slider = document.getElementById('slider')
 playBtn = document.getElementById('playBtn')
@@ -113,6 +113,8 @@ window.player = {
             let interval = 1000 / this.speed
             if (this.progress >= 2441 && this.progress <= 2445) {
                 interval /= 20 // shooting star!
+            } else if (textFrames[this.progress] && interval < 800) {
+                interval = 800
             }
 
             frame.onload = function(){
@@ -212,5 +214,6 @@ player.setProgress(player.maxProgress)
 player.togglePlay()
 
 --></script>
+<script defer src="/s/1190/textframes.js"></script>
 
 {% endblock %}

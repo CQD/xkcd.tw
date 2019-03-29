@@ -1,0 +1,89 @@
+#!/usr/bin/env bash
+
+outfile=public/s/1190/textframes.js
+
+beanishFrames=(
+    2663
+    2664
+    2668
+    2671
+    2676
+    2697
+    2706
+    2708
+    2713
+    2727
+    2728
+    2734
+    2797
+    2798
+    2802
+    2806
+    2821
+    2823
+    2827
+    2836
+    2841
+    2842
+    2863
+    2864
+    2865
+    2866
+    2880
+    2882
+    2906
+    2933
+    2934
+    2935
+    2941
+    2969
+)
+
+otherKeyFrames=(
+    403
+    951
+    1933
+    2698
+    2698
+    2720
+    2722
+    2723
+    2725
+    2726
+    2731
+    2732
+    2736
+    2738
+    2739
+    2741
+    2803
+    2830
+    2834
+    2925
+    2926
+    2956
+    2982
+    3028
+    3042
+    3081
+)
+
+function getIds() {
+    echo "列出大小不是 553 x 395 的圖檔" >&2
+
+    ls public/s/1190/*/*.png | xargs -I{} file {} |  grep -v '553 x 395' | grep -o '[1-9][0-9]\+.png' | grep -o '[0-9]\+'
+
+    echo "列出 beanish 跟其他重要 key frame" >&2
+    for id in "${beanishFrames[@]} ${otherKeyFrames[@]}"; do
+        echo $id
+    done
+}
+
+echo 'textFrames = {' > $outfile
+
+for id in $(getIds | sort -nu); do
+    echo "$id:1," >> $outfile
+done
+
+echo '}' >> $outfile
+echo "完成" >&2
