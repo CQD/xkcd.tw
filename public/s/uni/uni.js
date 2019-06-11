@@ -37,6 +37,7 @@ $(function() {
             filesystem.strips[id.toString()] = function(){
                 term.echo(`[${strip.id}] ${strip.title}`)
                 runCommand('image', ['image', strip.img_url])
+                term.echo(`https://xkcd.tw/${strip.id}`)
             }
         }
     })
@@ -128,6 +129,8 @@ $(function() {
         'login': function(argv){
             if (!argv[1]) {
                 term.echo('站住口令誰')
+            } else if ('root' === argv[1]) {
+                term.echo('只要我們有根，明春，明春來時，我們又會枝繁葉茂，宛如新生。')
             } else {
                 session.username = argv[1]
                 term.set_prompt()
@@ -394,6 +397,9 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
         'uname': 'Illudium Q-36 Explosive Space Modulator',
         'whoami': 'https://www.google.com.tw/search?q=%E5%A4%B1%E6%99%BA\n趁早認識失智症，你還有救',
         'cqd': '做你現在看到的東西的傢伙 => https://cqd.tw',
+        'exit': '你無處可逃',
+        'logout': '你無處可逃',
+        'mkdir': '你打開了通往異世界的大資料夾',
         'xkcd': function(argv) {
             if (!argv[1]) {
                 term.echo('某個畫的漫畫很純的美國人 => https://xkcd.com')
