@@ -1,11 +1,6 @@
-{% extends "main.twig" %}
+{% extends "strip.twig" %}
 
-{% block content %}
-<h1>[{{strip.id}}] {{strip.title}}</h1>
-{% if strip.prev_id %}<div class="prevLink"><a href="/{{strip.prev_id}}">⇐前一篇</a></div>{% endif%}
-<div class="randomLink"><a href='/random'>隨機一篇</a></div>
-{% if strip.next_id %}<div class="nextLink"><a href="/{{strip.next_id}}">下一篇⇒</a></div>{% endif%}
-<div style="clear:both; height:1em;"></div>
+{% block comic %}
 
 <div id="comic">
 <img src="{{strip.img_url}}" style="max-height:{{strip.height}}px" alt="{{strip.title}}" title="{{strip.caption}}">
@@ -14,7 +9,5 @@
 
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/s/1110/d28668.js"></script>
-{% if strip.comment %}<p class="comment">{{strip.comment}}</p>{% endif %}
 
-<p style='margin-top:3em'><a href="https://xkcd.com/{{strip.id}}">原文連結</a></p>
 {% endblock %}

@@ -7,11 +7,14 @@
 {% if strip.next_id %}<div class="nextLink"><a href="/{{strip.next_id}}">下一篇⇒</a></div>{% endif%}
 <div style="clear:both; height:1em;"></div>
 
+{% block comic %}
 {% if strip.link %}<a href="{{strip.link}}">{% endif %}
 <img src="{{strip.img_url}}" style="max-height:{{strip.height}}px" alt="{{strip.title}}" title="{{strip.caption}}">
 {% if strip.link %}</a>{% endif %}
 
-{% if strip.comment %}<p class="comment">{{strip.comment|raw}}</p>{% endif %}
+{% endblock %}
 
+
+{% if strip.comment %}<p class="comment">{{strip.comment|raw}}</p>{% endif %}
 <p style='margin-top:3em'><a href="https://xkcd.com/{{strip.id}}/">原文連結</a></p>
 {% endblock %}
