@@ -6,6 +6,19 @@ $options = getOptions();
 $strips = getAllRecommandedStrips();
 $strips = fillTranslatedStrips($strips);
 
+if ($options['ratio-only']) {
+    $done = 0;
+    $total = count($strips);
+    foreach ($strips as $s) {
+        if ($s['translated']) {
+            $done++;
+        }
+    }
+
+    printf("Done ration: %.3f%% (%d / %d)\n", 100 * $done / $total, $done, $total);
+    exit;
+}
+
 if (!$options['showall']) {
     $strips = array_filter($strips, function($s){
         return !$s['translated'];
@@ -110,10 +123,11 @@ function output($strips)
 
 function getOptions()
 {
-    $o = getopt('a');
+    $o = getopt('ar');
 
     $flagMap = [
         'a' => ['showall', false],
+        'r' => ['ratio-only', false],
     ];
 
     $options = [];
