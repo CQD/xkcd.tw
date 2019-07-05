@@ -40,6 +40,7 @@ function staticRoute($path)
         '/recommand'            => 'recommand.php',
         '/feed'                 => 'feed.php',
         '/sitemap.xml'          => 'sitemap.php',
+        '/random'               => 'random.php',
         '/404'                  => 'xkcd404.php',
         '/404/'                 => 'xkcd404.php',
         '/api/list_recommand'   => 'api_list_recommand.php',

@@ -2,8 +2,9 @@
 
 {% block content %}
 <h1>[{{strip.id}}] {{strip.title}}</h1>
-{% if strip.prev_id %}<div class="prevLink"><a href="/{{strip.prev_id}}">⇐前一個翻譯</a></div>{% endif%}
-{% if strip.next_id %}<div class="nextLink"><a href="/{{strip.next_id}}">下一個翻譯⇒</a></div>{% endif%}
+{% if strip.prev_id %}<div class="prevLink"><a href="/{{strip.prev_id}}">⇐前一篇</a></div>{% endif%}
+<div class="randomLink"><a href='/random'>隨機一篇</a></div>
+{% if strip.next_id %}<div class="nextLink"><a href="/{{strip.next_id}}">下一篇⇒</a></div>{% endif%}
 <div style="clear:both; height:1em;"></div>
 
 <div id="comic">
