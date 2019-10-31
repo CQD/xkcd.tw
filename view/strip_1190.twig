@@ -126,10 +126,16 @@ window.player = {
                     }
                 }, Math.max(interval,0))
             }
+        } else {
+            this.pause()
         }
     },
 
     pause: function(reason){
+        if (this.speed === 0) {
+            return
+        }
+
         if (this.nextStep) {
             clearTimeout(this.nextStep)
             this.nextStep = false
