@@ -213,6 +213,22 @@ progress.addEventListener('focus', function(){
 player.setProgress(player.maxProgress)
 player.togglePlay()
 
+window.addEventListener('keydown', function(e){
+    switch (e.key || e.keycode) {
+        case 'ArrowLeft':
+        case 37:
+            player.stepFrame(-1)
+            break;
+        case 'ArrowRight':
+        case 39:
+            player.stepFrame(1)
+            break;
+        case ' ':
+        case 32:
+            player.togglePlay()
+            e.preventDefault()
+    }
+})
 --></script>
 <script defer src="/s/1190/textframes.js"></script>
 
