@@ -101,7 +101,7 @@ a:hover{
 }
 .randomLink{
     position: absolute;
-    width:100%;
+    left:calc(50% - 2em);
 }
 
 .comment{
