@@ -12,6 +12,9 @@
     padding-left:5px;
     padding-right:5px;
 }
+.active{
+    background-color: #def;
+}
 </style>
 {% endblock %}
 
@@ -35,10 +38,10 @@
 </div>
 
 <div style="margin-bottom:4px">
-<button id="spd1" onclick="player.setSpeed(1.3)">1x</button>
-<button id="spd3" onclick="player.setSpeed(2.6)">2x</button>
-<button id="spd5" onclick="player.setSpeed(6.5)">5x</button>
-<button id="spd10" onclick="player.setSpeed(13)">10x</button>
+<button id="spd1" onclick="player.setSpeed(1.3)" class="spdbtn active">1x</button>
+<button id="spd2" onclick="player.setSpeed(2.6)" class="spdbtn">2x</button>
+<button id="spd5" onclick="player.setSpeed(6.5)" class="spdbtn">5x</button>
+<button id="spd10" onclick="player.setSpeed(13)" class="spdbtn">10x</button>
 </div>
 
 <div>
@@ -88,11 +91,30 @@ window.player = {
         }
         this.pauseReason = false
         playBtn.textContent = '❙❙'
+        playBtn.classList.add('active')
     },
 
     setSpeed: function(s){
         this.defaultSpeed = s
         this.speed = this.speed ? s : 0
+
+        let btnMap = {
+            1.3: 'spd1',
+            2.6: 'spd2',
+            6.5: 'spd5',
+            13: 'spd10',
+        }
+
+        let btnId = btnMap[s] || false
+        if (btnId) {
+            let active = document.querySelector('.spdbtn.active')
+            if (active) {
+                active.classList.remove('active')
+            }
+            document.getElementById(btnId).classList.add('active')
+        }
+
+        this.showProgress()
     },
 
     stepFrame: function(direction) {
@@ -148,6 +170,7 @@ window.player = {
         }
 
         playBtn.textContent = '▶'
+        playBtn.classList.remove('active')
     },
 
     unpause: function(reason){
