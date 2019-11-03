@@ -15,15 +15,18 @@
 .active{
     background-color: #def;
 }
+#preloadIndicator{
+    line-height:5px;
+}
 </style>
 {% endblock %}
 
 {% block comic %}
 
 <img id="frame" src="/s/1190/00/0001.png" style="max-height:{{strip.height}}px" alt="{{strip.title}}" title="{{strip.caption}}">
+<canvas id="preloadIndicator" width="533" height="2"></canvas>
 
 <div id="controllPanel">
-
 <div style="margin-bottom:4px">
 <input id="slider" style="width:100%;" type="range" min="1" max="3099" value="1">
 <button id="toFirst" onclick="player.setProgress(1);">|◀◀</button>
@@ -73,6 +76,9 @@ playBtn = document.getElementById('playBtn')
 time = document.getElementById('time')
 preloader = document.getElementById('preloader')
 frame = document.getElementById('frame')
+
+preloadIndicator = document.getElementById('preloadIndicator')
+preloadCtx = document.getElementById('preloadIndicator').getContext('2d')
 
 window.player = {
     defaultSpeed: 1.3,
@@ -274,10 +280,13 @@ preloader.setPosition = function (id) {
     this.position = pos
     this.src = player.id2path(pos)
 }
+
+preloadCtx.fillStyle = "#666"
 preloader.addEventListener('load', function(){
     delete this.idsToLoad[this.position]
     this.idsToLoad.length = Object.keys(this.idsToLoad).length - 1
     this.setPosition(this.position >= player.maxProgress ? 1 : this.position + 1)
+    preloadCtx.fillRect(this.position / player.maxProgress * preloadIndicator.width, 0, 1, 3)
 })
 preloader.setPosition(1)
 
