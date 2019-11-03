@@ -68,6 +68,7 @@ window.player = {
 
     speed: 0,    // frame per second
     progress: 1, // current frame
+    textframeMinTime: 800, // mininal display time for key frames, in milliseconds
     pauseReason: 'stopped',
 
     nextStep: false,
@@ -113,8 +114,8 @@ window.player = {
             let interval = 1000 / this.speed
             if (this.progress >= 2441 && this.progress <= 2445) {
                 interval /= 20 // shooting star!
-            } else if (textFrames[this.progress] && interval < 800) {
-                interval = 800
+            } else if (textFrames[this.progress] && interval < this.textframeMinTime) {
+                interval = this.textframeMinTime
             }
 
             frame.onload = function(){
@@ -179,6 +180,17 @@ window.player = {
         slider.value = this.progress
 
         let secLeft = (this.maxProgress - this.progress - 4) / this.defaultSpeed
+        let frameTime = 1000 / this.defaultSpeed
+        let diff = this.textframeMinTime - frameTime
+        if (diff > 0) {
+            diff /= 1000 // millisec to sec
+            Object.keys(textFrames).forEach(key => {
+                if (key >= this.progress) {
+                    secLeft += diff
+                }
+            })
+        }
+
         secLeft = Math.max(0, secLeft)
         let min = (parseInt(secLeft/60) + "").padStart(2, "0")
         let sec = (parseInt(secLeft%60) + "").padStart(2, "0")
