@@ -16,3 +16,6 @@ deploy: installNoDev build/image_map.php
 
 server: installWithDev build/image_map.php
 	php -S localhost:8080 -t public/
+
+textframe:
+	bin/1190_textframe
