@@ -150,7 +150,7 @@ window.player = {
         if (this.speed > 0 && !direction) {
             let interval = 1000 / this.speed
             if (this.progress >= 2441 && this.progress <= 2445) {
-                interval /= 20 // shooting star!
+                interval /= 20 // 遠い国から 辿り着いた 君はあの光る星 shooting star
             } else if (textFrames[this.progress] && interval < this.textframeMinTime) {
                 interval = this.textframeMinTime
             }
