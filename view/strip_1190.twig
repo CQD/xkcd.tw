@@ -238,6 +238,18 @@ window.player = {
     showImage: function(id){
         frame.src = this.id2path(id)
         preloader.setPosition(id)
+
+        if (id >= 3094 ) {
+            frame.title = '劇終'
+        } else if (id >= 3072) {
+            frame.title = '...'
+        } else if (id >= 2927) {
+            frame.title = '快跑'
+        } else if (id >= 2925) {
+            frame.title = '...'
+        } else {
+            frame.title = '下格待續'
+        }
     },
 
     id2path: function(id){
