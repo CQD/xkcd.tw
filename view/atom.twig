@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 {% autoescape %}
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:webfeeds="http://webfeeds.org/rss/1.0">
 
 <title>{{ title }}</title>
 <subtitle>{{ desc }}</subtitle>
@@ -9,6 +9,7 @@
 <id>https://xkcd.tw/feed</id>
 <updated>{{ pub_date }}</updated>
 <author><name>CQD</name></author>
+<webfeeds:analytics id="UA-368263-19" engine="GoogleAnalytics"/>
 
 {% for item in items %}
 <entry>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 {% autoescape %}
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:webfeeds="http://webfeeds.org/rss/1.0">
 
 <channel>
 
@@ -12,6 +12,7 @@
 <docs>https://xkcd.tw/feed?f=rss</docs>
 <pubDate>{{ pub_date }}</pubDate>
 <lastBuildDate>{{ pub_date }}</lastBuildDate>
+<webfeeds:analytics id="UA-368263-19" engine="GoogleAnalytics"/>
 
 {% for item in items %}
 <item>
