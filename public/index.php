@@ -16,7 +16,10 @@ $strips = include __DIR__ . '/../src/data/strips.php';
 $imageMap = include __DIR__ . '/../build/image_map.php';
 foreach ($strips as $id => $strip) {
     $strips[$id]['id'] = $id;
-    $strips[$id]['img_url'] = @$strips[$id]['img_url'] ?: "/strip/{$imageMap[$id]}";
+    $defaultImageUrl = isset($imageMap[$id])
+        ? "/strip/{$imageMap[$id]}"
+        : "/strip/{$id}.png";
+    $strips[$id]['img_url'] = $strips[$id]['img_url'] ?? $defaultImageUrl;
 }
 
 $path = $_SERVER['REQUEST_URI'] ?? '/';
