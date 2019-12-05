@@ -1,5 +1,10 @@
 {% extends "main.twig" %}
 
+{% block head %}
+<link rel="canonical" href="https://xkcd.tw/{{strip.id}}"/>
+{% endblock %}
+
+
 {% block content %}
 <h1>[{{strip.id}}] {{strip.title}}</h1>
 {% if strip.prev_id %}<div class="prevLink"><a href="/{{strip.prev_id}}">⇐前一篇</a></div>{% endif%}
