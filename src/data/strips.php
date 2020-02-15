@@ -837,7 +837,7 @@ return [
     ],
     1755 => [
         'title' => '舊時光',
-        'caption' => 'Lot of drama in those days, including constant efforts to force the &quot;Reflections on Trusting Trust&quot; guy into retirement so we could stop being so paranoid about compilers.',
+        'caption' => '那段日子故事挺多的，像是努力讓那個「反思對信任的信任」的傢伙退休，我們才不用一直對編譯器感到擔心害怕。',
         'height' => 490,
         'date' => '2016-11-4',
         'translate_time' => '2016-11-27 00:20:48',
