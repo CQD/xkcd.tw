@@ -471,6 +471,24 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
     }, {
         greetings: '[[;white;]unixkcdtw\n這裡翻譯某個關於浪漫、諷刺、數學、以及語言的漫畫]\n\n',
         checkArity: false,
+        completion: function(string, callback) {
+            let full = this.get_command()
+            let matches
+            if (full !== string) {
+                let pathParts = string.split('/')
+                let base = pathParts.slice(0, -1).join('/')
+                let file = pathParts.slice(-1)
+                let pattern = new RegExp(`^${file}`)
+
+                matches = Object.keys(getFilesystem(base))
+                    .filter(path => path.match(pattern))
+                    .map(path => base ? `${base}/${path}` : path)
+            } else {
+                let pattern = new RegExp(`^${string}`)
+                matches = Object.keys(cmds).filter(path => path.match(pattern))
+            }
+            callback(matches)
+        },
     })
 
     term.set_prompt(function(set_prompt){
