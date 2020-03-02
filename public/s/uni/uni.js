@@ -496,7 +496,8 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
                     .map(path => base ? `${base}/${path}` : path)
             } else {
                 let pattern = new RegExp(`^${string}`)
-                matches = Object.keys(cmds).filter(path => path.match(pattern))
+                matches = Object.keys(cmds)
+                    .filter(cmd => cmd.match(pattern) && 'commandnotfound' !== cmd)
             }
             callback(matches)
         },
