@@ -365,6 +365,7 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
         'pico': ['你應該用小畫家', '你應該用筆記本', '你應該用 notepad++'],
         'notepad': ['你應該用小畫家', '你應該用 notepad++', '你應該用 Ultraedit'],
         'notepad++': ['你應該用小畫家', '你應該用筆記本', '你應該用 Ultraedit'],
+        'ultraedit': ['你應該用小畫家', '你應該用筆記本', '你應該用 notepad++'],
         'mspaint': function(){window.open('https://jspaint.app')},
         'git': [
             'conflict 解不掉',
@@ -384,7 +385,17 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
             let s = argv.slice(1).join('~') || '啊'
             term.echo(s+'~~~'+s+'~~~'+s+'~~~')
         },
+        'tree': '長得像大～樹～一樣高～',
         'ping': '....發現潛艇，前方三浬，方位225，深度10公尺',
+        'dig': '你挖了一個洞',
+        'whois': function (argv) {
+            if (argv.length <= 1) {
+                term.echo('你說誰是誰？')
+            } else {
+                term.echo(`${argv.slice(1).join(' ')} 是誰很重要嗎？`)
+            }
+        },
+        'nslookup': '上面沒什麼好看的',
         'python': '沒有大括號的傢伙得意什麼，哼哼',
         'node': 'no 的',
         'php': '不過是個樣版引擎',
