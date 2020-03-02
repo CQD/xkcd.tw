@@ -142,6 +142,8 @@ $(function() {
 
             if (!tgt) {
                 term.echo(path + ': 檔案或資料夾不存在');
+            } else if (typeof tgt !== 'object') {
+                term.echo(path + ': 不是個資料夾');
             } else {
                 session.pwd = normalizePath(path)
             }
