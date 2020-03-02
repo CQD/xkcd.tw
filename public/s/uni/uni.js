@@ -116,7 +116,7 @@ $(function() {
         'telnet': function(argv){
             if (1 == argv.length) {
                 term.echo('請輸入主機位址')
-            } else if (-1 != ['ptt.cc', 'bbsu@ptt.cc', 'bbs@ptt.cc'].indexOf(argv[1])) {
+            } else if (-1 != ['ptt.cc', 'bbsu@ptt.cc', 'bbs@ptt.cc', 'ptt'].indexOf(argv[1])) {
                 window.open('https://term.ptt.cc/')
             } else {
                 term.echo('不過就算告訴我主機位址我還是不會連線的')
