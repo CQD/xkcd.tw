@@ -123,6 +123,9 @@ $(function() {
             }
         },
         'sudo': function(argv) {
+            if (2 > argv.length) {
+                term.echo('你想幹嘛？')
+            }
             session.sudo = true
             runCommand(argv[1], argv.slice(1))
         },
