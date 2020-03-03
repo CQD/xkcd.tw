@@ -119,7 +119,7 @@ $(function() {
             } else if (-1 != ['ptt.cc', 'bbsu@ptt.cc', 'bbs@ptt.cc', 'ptt'].indexOf(argv[1])) {
                 window.open('https://term.ptt.cc/')
             } else {
-                term.echo('不過就算告訴我主機位址我還是不會連線的')
+                term.echo('不過就算告訴我主機位址，我還是不會連線的')
             }
         },
         'sudo': function(argv) {
