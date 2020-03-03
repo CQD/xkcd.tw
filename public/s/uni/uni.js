@@ -499,7 +499,10 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
             } else {
                 let pattern = new RegExp(`^${string}`)
                 matches = Object.keys(cmds)
-                    .filter(cmd => cmd.match(pattern) && 'commandnotfound' !== cmd)
+                    .filter(cmd => cmd.match(pattern)
+                        && 'commandnotfound' !== cmd
+                        && 'image' !== cmd
+                    )
             }
             matches.sort()
             callback(matches)
