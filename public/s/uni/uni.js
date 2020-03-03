@@ -486,7 +486,7 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
         checkArity: false,
         completion: function(string, callback) {
             let full = this.get_command()
-            let matches
+            let matches = []
             if (full !== string) {
                 let pathParts = string.split('/')
                 let base = pathParts.slice(0, -1).join('/')
@@ -501,6 +501,7 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
                 matches = Object.keys(cmds)
                     .filter(cmd => cmd.match(pattern) && 'commandnotfound' !== cmd)
             }
+            matches.sort()
             callback(matches)
         },
     })
