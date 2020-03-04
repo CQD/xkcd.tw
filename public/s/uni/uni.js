@@ -360,6 +360,12 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
                 term.echo('你以為你看到了什麼，但你其實什麼都沒看到')
             }
         },
+        'sleep': function(argv){
+            let sleeptime = parseInt(argv[1]) || 5
+            term.echo(`你沈睡了 ${sleeptime} 秒鐘`);
+            term.pause()
+            setTimeout(function(){term.resume()}, sleeptime * 1000)
+        },
         'cls': function(){term.exec('clear')},
         'why': function(){runCommand('cat', ['cat', '~/why.txt'])},
         'vi': '你應該用 emacs',
@@ -415,6 +421,15 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
         'cqd': '做你現在看到的東西的傢伙 => https://cqd.tw',
         'exit': '你無處可逃',
         'logout': '你無處可逃',
+        'reboot': function(argv){
+            if (session.sudo) {
+                term.echo('重新啟動中...')
+                term.pause()
+                setTimeout(() => window.location.reload(), 500)
+            } else {
+                term.echo('不下呂布')
+            }
+        },
         'mkdir': '你打開了通往異世界的大資料夾',
         'xkcd': function(argv) {
             if (!argv[1]) {
@@ -451,6 +466,7 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
     cmds.ssh   = cmds.telnet
     cmds.dir   = cmds.ls
     cmds.woman = cmds.man
+    cmds.restart = cmds.reboot
 
     let runCommand = function(name, argv){
         argv = argv ? argv.filter(p => {return p.charAt(0) != '-'}) : argv
