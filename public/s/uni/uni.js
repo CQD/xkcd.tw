@@ -20,7 +20,7 @@ $(function() {
     }
 
     let filesystem = {
-        'welcome.txt': '歡迎使用 unixkcd-tw 主控台\n\n`strips/{id}` 可以看指定的漫畫\n`ls strips` 可以看到漫畫清單\n\n用 `ls` `cd` `cat` 可以瀏覽檔案系統\n',
+        'welcome.txt': '歡迎使用 unixkcd-tw 主控台\n\n`xkcd {id}` 可以看指定的漫畫\n`ls strips` 可以看到漫畫清單\n\n用 `ls` `cd` `cat` 可以瀏覽檔案系統\n',
         'why.txt': 'https://uni.xkcd.com <= 這是某一年的愚人節玩笑',
         'strips' : {
         },
@@ -31,15 +31,24 @@ $(function() {
 
     let strips = {}
     $.get('/api/strip', function(d){
+        let lastStrip, lastStripTime = '1999-01-01 00:00:00';
+
         strips = d
-        for (id in d) {
+        for (let id in d) {
             let strip = d[id]
             filesystem.strips[id.toString()] = function(){
                 term.echo(`[${strip.id}] ${strip.title}`)
                 runCommand('image', ['image', strip.img_url])
                 term.echo(`https://xkcd.tw/${strip.id}`)
             }
+
+            if (lastStripTime < strip.translate_time) {
+                lastStrip = strip
+                lastStripTime = strip.translate_time
+            }
         }
+
+        setTimeout(() => term.exec(`xkcd ${lastStrip.id}`), 500)
     })
 
     let getFilesystem = function(path){
