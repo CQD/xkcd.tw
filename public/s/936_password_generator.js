@@ -3404,6 +3404,8 @@ function genPassword(source)
     }
     document.getElementById('password').innerText = Object.keys(obj).join(" ")
 
-    ga('send', 'event', 'GenPassword', source);
+    gtag && gtag('event', source, {
+        'event_category': 'GenPassword'
+    });
 }
 genPassword('auto');
