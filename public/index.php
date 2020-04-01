@@ -25,7 +25,7 @@ foreach ($strips as $id => $strip) {
 $path = $_SERVER['REQUEST_URI'] ?? '/';
 $path = explode('?', $path)[0];
 
-if ('/' === $path && '2020-04-01' === date('Y-m-d') ) {
+if ('/' === $path && time() < strtotime('2020-04-02 03:00:00') ) {
     require __DIR__ . '/s/uni/index.html';
     exit;
 }
