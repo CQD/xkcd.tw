@@ -509,6 +509,10 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
         let argv = input.trim().split(/\s+/)
         let cmd = argv[0]
         runCommand(cmd, argv)
+
+        gtag && gtag('event', 'cmd_input', {
+            'event_category': 'unixkcd'
+        });
     }, {
         greetings: '[[;white;]unixkcdtw\n這裡翻譯某個關於浪漫、諷刺、數學、以及語言的漫畫]\n\n',
         checkArity: false,
