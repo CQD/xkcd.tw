@@ -25,6 +25,11 @@ foreach ($strips as $id => $strip) {
 $path = $_SERVER['REQUEST_URI'] ?? '/';
 $path = explode('?', $path)[0];
 
+if ('/' === $path && '2020-04-01' === date('Y-m-d') ) {
+    require __DIR__ . '/s/uni/index.html';
+    exit;
+}
+
 include __DIR__ . '/../src/' . route($path);
 exit;
 
