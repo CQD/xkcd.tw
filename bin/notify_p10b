@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo 發送訊息給 Pubshubhubbub
+
+curl -H POST 'https://pubsubhubbub.appspot.com/' -d 'hub.mode=publish&hub.url=https%3A%2F%2Fxkcd.tw%2Ffeed' \
+  && echo "發送完畢"

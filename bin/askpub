@@ -1,9 +1,0 @@
-#!/bin/bash
-
-read -p "要發送訊息給 Pubshubhubbub 嗎？(Y/N) " -n 1 -r -e
-
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-    curl -H POST 'https://pubsubhubbub.appspot.com/' -d 'hub.mode=publish&hub.url=https%3A%2F%2Fxkcd.tw%2Ffeed' \
-      && echo "發送完畢"
-fi
