@@ -6,7 +6,7 @@ body{
 }
 .wrapper{
     margin:0 auto;
-    padding:1em;
+    padding:5px 1em 1em;
     max-width:900px;
     position:relative;
 }
@@ -42,7 +42,7 @@ hr {
 
 #content{
     text-align: center;
-    margin:10px 0 50px;
+    margin:0 0 50px;
     padding:0 0 50px ;
     border-top:1px solid #ccc;
     border-bottom:1px solid #ccc;
