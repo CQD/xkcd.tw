@@ -40,14 +40,11 @@ function staticRoute($path)
 {
     $map = [
         '/'                     => 'index.php',
-        '/recommand'            => 'recommand.php',
         '/feed'                 => 'feed.php',
         '/sitemap.xml'          => 'sitemap.php',
         '/random'               => 'random.php',
         '/404'                  => 'xkcd404.php',
         '/404/'                 => 'xkcd404.php',
-        '/api/list_recommand'   => 'api_list_recommand.php',
-        '/api/list_recommand/'  => 'api_list_recommand.php',
         '/api/strip'            => 'api_strip.php',
     ];
 
@@ -67,7 +64,6 @@ function dynamicRoute($path)
     $map = [
         '/'                     => 'strip.php',
         '/api/strip/original/'  => 'api_strip_original.php',
-        '/api/recommand/'       => 'api_recommand.php',
     ];
 
     return $map[$prefix] ?? false;
