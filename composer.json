@@ -1,6 +1,5 @@
 {
     "require": {
-        "twig/twig": "^1.24",
-        "google/cloud-storage": "^1.9"
+        "twig/twig": "^1.24"
     }
 }
