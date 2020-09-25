@@ -133,9 +133,15 @@ $(function() {
         },
         'sudo': function(argv) {
             if (2 > argv.length) {
-                term.echo('你想幹嘛？')
+                let msg = '你想幹嘛？'
+                if (session.sudodepth > 0) {
+                    msg = `你想幹嘛...都${new Array(session.sudodepth).fill('').map(e => '可以').join('...')}...`
+                }
+                term.echo(msg)
+                return
             }
             session.sudo = true
+            session.sudodepth++
             runCommand(argv[1], argv.slice(1))
         },
         'login': function(argv){
@@ -505,6 +511,7 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
     $body.children().remove();
     let term = $body.terminal(function(input, term){
         session.sudo = false
+        session.sudodepth = 0
 
         let argv = input.trim().split(/\s+/)
         let cmd = argv[0]
