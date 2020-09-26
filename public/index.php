@@ -5,7 +5,7 @@ use Twig\Loader\FilesystemLoader as TwigFileLoader;
 
 spamBlock();
 
-include __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 date_default_timezone_set('Asia/Taipei');
 header('Content-Type: text/html; Charset=utf-8');
@@ -15,8 +15,8 @@ $twig = new Twig(new TwigFileLoader(__DIR__ . '/../view'));
 $og = [
 ];
 
-$strips = include __DIR__ . '/../src/data/strips.php';
-$imageMap = include __DIR__ . '/../build/image_map.php';
+$strips = require __DIR__ . '/../src/data/strips.php';
+$imageMap = require __DIR__ . '/../build/image_map.php';
 foreach ($strips as $id => $strip) {
     $strips[$id]['id'] = $id;
     $defaultImageUrl = isset($imageMap[$id])
@@ -28,7 +28,7 @@ foreach ($strips as $id => $strip) {
 $path = $_SERVER['REQUEST_URI'] ?? '/';
 $path = explode('?', $path)[0];
 
-include __DIR__ . '/../src/' . route($path);
+require __DIR__ . '/../src/' . route($path);
 exit;
 
 ////////////////////////////////////////////////////////////////
