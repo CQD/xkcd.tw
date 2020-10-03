@@ -1124,7 +1124,7 @@ return [
         'title' => '隕石判斷',
         'caption' => '點圖可以看到真正的隕石判斷流程圖。我覺得最有趣的部分是「有人看到他掉下來嗎？ 有 -> 那不是隕石」，他沒寫錯。',
         'height' => 213,
-        'link' => 'http://meteorites.wustl.edu/check-list.htm',
+        'link' => 'https://sites.wustl.edu/meteoritesite/items/self-test-check-list/',
         'date' => '2016-8-22',
         'translate_time' => '2016-08-27 05:37:47',
     ],
