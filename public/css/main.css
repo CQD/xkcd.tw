@@ -11,7 +11,7 @@ body{
     position:relative;
 }
 
-header h1{
+#logo{
     font-size:1px;
     color:white;
     margin:0;
