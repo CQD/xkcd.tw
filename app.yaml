@@ -1,4 +1,4 @@
-runtime: php73
+runtime: php74
 default_expiration: "1d"
 
 handlers:
