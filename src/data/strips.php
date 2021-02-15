@@ -1950,6 +1950,7 @@ return [
         'date' => '2012-9-19',
         'translate_time' => '2018-02-21 13:23:25',
         'template' => 'strip_1110.twig',
+        'comment' => '如果覺得這樣看太累，這裡有<a href="/s/1110/map.html">完整地圖檢視</a>可以用。',
     ],
     1109 => [
         'title' => '冰箱',
