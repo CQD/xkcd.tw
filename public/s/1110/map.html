@@ -26,27 +26,20 @@
 <script><!--
 
 let bounds = new L.Bounds(new L.Point([8,48]),new L.Point([19,33]));
-let center = [-630, 128];
+let center = [-1.2, 0.2];
 
 let map = L.map('map',{
     crs: L.CRS.Simple,
     center: bounds.getCenter(),
     maxBounds: bounds,
     maxBoundsViscosity: 0.7,
-})
-.setView(center, 1);
-
-
-let mainLayer = L.tileLayer('', {
-    attribution: "<a href='https://xkcd.tw'>XKCD.tw</a>",
-    maxZoom: 1,
-    minZoom: 1,
-    tileSize: 2048,
 });
+map.attributionControl.addAttribution('<a href="https://xkcd.tw">XKCD.tw</a>');
 
-mainLayer.getTileUrl = function(coords) {
+let tileUrlFunc = function(coords) {
     let x = coords.x;
     let y = - coords.y;
+    let z = coords.z;
 
     // 計算時不使用 0 ，只有 +1 跟 -1
     x = x < 0 ? x : x + 1;
@@ -54,14 +47,31 @@ mainLayer.getTileUrl = function(coords) {
 
     let name = `${Math.abs(y)}${y > 0 ? 'n' : 's'}${Math.abs(x)}${x > 0 ? 'e' : 'w'}`;
 
-    if (!mapTileExists(name)) {
+    if (y > 11 || y < -19 || x > 48 || x < -33) {
+        name = 'grey';
+    } else if (!mapTileExists(name)) {
         name = y > 0 ? 'white' : 'black';
+    } else if (z <= 7) {
+        name = `quarter/${name}`;
     }
 
     return `/s/1110/${name}.png`;
 }
 
-mainLayer.addTo(map);
+// 每個 zoom level 一個 layer，以達到動態 tile 大小的效果
+// 官方推薦的 workaround....
+// https://github.com/Leaflet/Leaflet/issues/928
+for (let zoomLevel = 5; zoomLevel <= 10; zoomLevel++) {
+    let layer = L.tileLayer('', {
+        maxZoom: zoomLevel,
+        minZoom: zoomLevel,
+        tileSize: 2 * Math.pow(2, zoomLevel),
+    });
+
+    layer.getTileUrl = tileUrlFunc;
+
+    layer.addTo(map);
+}
 
 let home = new L.Control({position:'bottomright'});
 
@@ -90,6 +100,7 @@ home.onRemove = function(map) {
 
 home.addTo(map);
 
+map.setView(center, 9);
 ////////////////////////////////////////////
 
 function mapTileExists(name){
