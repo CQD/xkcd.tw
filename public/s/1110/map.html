@@ -16,6 +16,7 @@
 #map{
     width:100vw;
     height:100vh;
+    height: calc(var(--vh, 1vh) * 100); // hack for mobile height
 }
 </style>
 </head>
@@ -108,6 +109,17 @@ home.onRemove = function(map) {
 home.addTo(map);
 
 map.setView(center, 9);
+
+// 行動裝置的 viewport 高度不是剛好 100vh
+// 要用 javascript 輔助修正
+let calculateVh = function () {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+window.addEventListener('resize', calculateVh);
+calculateVh();
+
 ////////////////////////////////////////////
 
 function mapTileExists(name){
