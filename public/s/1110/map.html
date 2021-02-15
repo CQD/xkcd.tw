@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>XKCD 1110 完整地圖</title>
 <meta name="description" content="XKCD 漫畫 1110 的完整地圖檢視">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 <link rel="preload" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" as="script">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
 <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
@@ -34,7 +35,7 @@ gtag('config', 'UA-368263-19');
 <script><!--
 
 let bounds = new L.Bounds(new L.Point([8,48]),new L.Point([19,33]));
-let center = [-1.2, 0.2];
+let center = [-1.35, 0.2];
 
 let map = L.map('map',{
     crs: L.CRS.Simple,
@@ -42,7 +43,7 @@ let map = L.map('map',{
     maxBounds: bounds,
     maxBoundsViscosity: 0.7,
 });
-map.attributionControl.addAttribution('<a href="https://xkcd.tw">XKCD.tw</a>');
+map.attributionControl.addAttribution('XKCD 漫畫 1110 地圖總覽 / <a href="https://xkcd.tw">XKCD.tw</a>');
 
 let tileUrlFunc = function(coords) {
     let x = coords.x;
@@ -108,7 +109,7 @@ home.onRemove = function(map) {
 
 home.addTo(map);
 
-map.setView(center, 9);
+map.setView(center, 10);
 
 // 行動裝置的 viewport 高度不是剛好 100vh
 // 要用 javascript 輔助修正
