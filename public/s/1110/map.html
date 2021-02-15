@@ -78,7 +78,7 @@ let tileUrlFunc = function(coords) {
 // 每個 zoom level 一個 layer，以達到動態 tile 大小的效果
 // 官方推薦的 workaround....
 // https://github.com/Leaflet/Leaflet/issues/928
-for (let zoomLevel = 5; zoomLevel <= 10; zoomLevel++) {
+for (let zoomLevel = 5; zoomLevel <= 12; zoomLevel++) {
     let layer = L.tileLayer('', {
         maxZoom: zoomLevel,
         minZoom: zoomLevel,
