@@ -69,11 +69,13 @@ footer{
           columns: 250px 3;
   text-align:left;
   margin-left:4em;
+  list-style: none;
+  padding:0;
 }
 #strip_list span{
     display:inline-block;
     width:5ex;
-    margin-right:0.3em;
+    margin-right:0.7em;
     opacity:0.4;
 }
 #strip_list span:before{

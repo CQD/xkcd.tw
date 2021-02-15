@@ -12,11 +12,11 @@
 依照翻譯更新順序排列。<a href="?o=publish">點此改為依照原版順序排列</a>。
 {% endif %}
 <p>
-<div id="strip_list">
+<ul id="strip_list">
 {% for id, strip in strips %}
-<a href="/{{id}}"><span>{{id}}</span> {{strip.title}}</a><br>
+<li><a href="/{{id}}"><span>{{id}}</span> {{strip.title}}</a></li>
 {% endfor %}
-</div>
+</ul>
 <div style="text-align:left">
 <hr>
 特殊頁面：
