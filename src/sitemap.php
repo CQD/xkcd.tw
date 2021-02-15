@@ -16,4 +16,5 @@ echo '<'?>?xml version="1.0" encoding="UTF-8"?>
 <?php endforeach ?>
 <url><loc>https://xkcd.tw/s/314_date_calculator.html</loc></url>
 <url><loc>https://xkcd.tw/s/936_password_generator.html</loc></url>
+<url><loc>https://xkcd.tw/s/1110/map.html</loc></url>
 </urlset>
