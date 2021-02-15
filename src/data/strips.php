@@ -583,6 +583,7 @@ return [
         'height' => 605,
         'date' => '2018-08-08',
         'translate_time' => '2018-09-12 19:19:30',
+        'comment' => 'Tom Scott 拍過影片解釋<a href="https://www.youtube.com/watch?v=LkH2r-sNjQs">為什麼電子投票不是個好主意</a>。',
     ],
     2027 => [
         'title' => '閃電的距離',
