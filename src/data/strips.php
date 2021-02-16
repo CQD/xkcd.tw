@@ -6,6 +6,10 @@ return [
         'height' => 3370,
         'date' => '2021-02-15',
         'translate_time' => '2021-02-16 14:13:24',
+        'og' =>
+        [
+            'image' => 'https://xkcd.tw/img/og_2425.png',
+        ],
     ],
     2423 => [
         'title' => '獵戶座計畫',
