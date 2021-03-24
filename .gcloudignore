@@ -3,3 +3,4 @@ asset/
 doc/
 bin/
 .git/
+tmp/
