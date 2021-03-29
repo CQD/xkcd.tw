@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+$strips = require __DIR__ . '/../src/data/strips.php';
+
+foreach ($strips as $id => $strip) {
+    $date = normalizeDate($strip['date']);
+    $translate_time = normalizeDate($strip['translate_time']);
+
+    printf("%5d %s %s %s\n", $id, $date, $translate_time, $strip['title']);
+}
+
+////////////////////////////////////////
+
+function normalizeDate(string $str) : string
+{
+    return date('Y-m-d', strtotime($str));
+}
