@@ -45,7 +45,7 @@ function staticRoute($path)
         '/random'               => 'random.php',
         '/404'                  => 'xkcd404.php',
         '/404/'                 => 'xkcd404.php',
-        '/api/strip'            => 'api_strip.php',
+        '/api/strips'           => 'api_strips.php',
     ];
 
     return $map[$path] ?? false;
