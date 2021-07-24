@@ -28,7 +28,7 @@ if ('translate' === $order) {
 }
 
 header("ETag: " . md5('xkcd.tw.index' . count($strips)));
-header('Cache-Control: public, max-age=3600'); // cache 1 小時
+header('Cache-Control: public, max-age=10800'); // cache 3 小時
 echo $twig->render('index.twig', [
     'page_title' => '首頁',
     'strips' => $strips,

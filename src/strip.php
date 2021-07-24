@@ -82,7 +82,7 @@ $etagBase = sprintf(
     $strip['translate_time']
 );
 header("ETag: " . md5($etagBase));
-header('Cache-Control: public, max-age=3600'); // cache 1 小時
+header('Cache-Control: public, max-age=86400'); // cache 1 天
 
 // 輸出
 echo $twig->render(@$strip['template'] ?: 'strip.twig', [
