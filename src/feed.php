@@ -26,7 +26,7 @@ $finalUpdateTime = reset($strips)['translate_time'];
 $template = "{$format}.twig";
 
 header("ETag: " . md5("xkcd.tw.feed.{$format}.{$finalUpdateTime}."));
-header('Cache-Control: public, max-age=3600');
+header('Cache-Control: public, max-age=10800');
 header("Content-Type: application/{$format}+xml; Charset=utf-8");
 echo $twig->render($template, [
     'title' => 'XKCD 中文翻譯',
