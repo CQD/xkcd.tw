@@ -1,13 +1,13 @@
 <?php
-$format = @$_GET['f'] ?: 'atom';
+$format = $_GET['f'] ?? 'atom';
 $format = strtolower($format);
 
 $format = ('rss' === $format) ? 'rss' : 'atom';
 
 uasort($strips, function($a, $b){
-    $ta = @$a['translate_time'] ?: '1999-01-01';
+    $ta = $a['translate_time'] ?? '1999-01-01';
     $ta = strtotime($ta);
-    $tb = @$b['translate_time'] ?: '1999-01-01';
+    $tb = $b['translate_time'] ?? '1999-01-01';
     $tb = strtotime($tb);
     return ($ta === $tb)
         ? ($a['id'] < $b['id'] ? 1 : -1)

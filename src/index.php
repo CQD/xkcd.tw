@@ -16,12 +16,12 @@ $ld = [
     ],
 ];
 
-$order = @$_GET['o'] ?: 'translate';
+$order = $_GET['o'] ?? 'translate';
 if ('translate' === $order) {
     uasort($strips, function($a, $b){
-        $ta = @$a['translate_time'] ?: '1999-01-01';
+        $ta = $a['translate_time'] ?? '1999-01-01';
         $ta = strtotime($ta);
-        $tb = @$b['translate_time'] ?: '1999-01-01';
+        $tb = $b['translate_time'] ?? '1999-01-01';
         $tb = strtotime($tb);
         return $tb <=> $ta;
     });

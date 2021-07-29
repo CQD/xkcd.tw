@@ -9,7 +9,7 @@ if ($argc <= 1) {
 }
 
 $id = (int) $argv[1];
-$action = @ $argv[2] ?: 'meta';
+$action = $argv[2] ?? 'meta';
 $meta = file_get_contents("https://xkcd.com/{$id}/info.0.json");
 
 if (!$meta) {
