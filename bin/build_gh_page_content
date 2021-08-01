@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+$strips = require __DIR__ . '/../src/data/strips.php';
+
+$pathes = array_keys($strips);
+$pathes[] = 'feed';
+$pathes[] = 'sitemap';
+$pathes[] = '404';
+$pathes[] = 'api/strips';
+$pathes[] = ''; // index
+
+$customExtensions = [
+    'feed' => 'xml',
+    'sitemap' => 'xml',
+    'api/strips' => 'json',
+];
+
+foreach ($pathes as $path) {
+    $cmd = sprintf(
+        'php %s/public/index.php /%s > %s/public/%s.%s',
+        __DIR__ . '/..',
+        $path,
+        __DIR__ . '/..',
+        $path ?: 'index',
+        $customExtensions[$path] ?? 'html',
+    );
+    echo $cmd, "\n";
+    shell_exec($cmd);
+}
