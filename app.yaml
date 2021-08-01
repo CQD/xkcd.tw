@@ -44,4 +44,4 @@ automatic_scaling:
   target_cpu_utilization: 0.95
   target_throughput_utilization: 0.95
   max_concurrent_requests: 50
-  max_idle_instances: 0
+  max_idle_instances: 1
