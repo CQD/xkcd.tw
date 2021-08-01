@@ -30,7 +30,7 @@ $(function() {
     }
 
     let strips = {}
-    $.get('/api/strip', function(d){
+    $.get('/api/strips.json', function(d){
         let lastStrip, lastStripTime = '1999-01-01 00:00:00';
 
         strips = d

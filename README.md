@@ -11,4 +11,4 @@
 提供兩組可以自動撈取資料的程式介面：
 
 - https://xkcd.tw/feed 是 ATOM Feed，可用閱讀器訂閱
-- https://xkcd.tw/api/strips 列出所有已翻譯項目的資料，格式為 JSON
+- https://xkcd.tw/api/strips.json 列出所有已翻譯項目的資料，格式為 JSON
