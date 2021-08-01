@@ -63,7 +63,6 @@ function dynamicRoute($path)
 
     $map = [
         '/'                     => 'strip.php',
-        '/api/strip/original/'  => 'api_strip_original.php',
     ];
 
     return $map[$prefix] ?? false;
