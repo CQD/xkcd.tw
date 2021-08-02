@@ -1,0 +1,33 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 7.4
+          tools: composer
+
+      - name: Install dependencies
+        run: composer install
+
+      - name: Build image map
+        run: make build/image_map.php
+
+      - name: Build pages
+        run: ./bin/build_gh_page_content
+
+      - name: Push to Github Page
+        run: ./bin/deploy_gh_page
+        env:
+          DEPLOY_TOKEN: ${{ secrets.deploy_token }}
