@@ -6,11 +6,10 @@
 
 {% block content %}
 
-{% if order == "publish" %}
-依照原版順序排列。<a href="?o=translate">點此改為依翻譯更新順序排列</a>。
-{% else %}
-依照翻譯更新順序排列。<a href="?o=publish">點此改為依照原版順序排列</a>。
-{% endif %}
+<div id="order-changer">
+依照翻譯更新順序排列。<a href="javascript:toggleIndexOrder()">點此改為依照原版順序排列</a>。
+</div>
+
 <p>
 <ul id="strip_list">
 {% for id, strip in strips %}
