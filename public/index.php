@@ -22,7 +22,9 @@ foreach ($strips as $id => $strip) {
     $strips[$id]['img_url'] = $strips[$id]['img_url'] ?? $defaultImageUrl;
 }
 
-$path = $_SERVER['REQUEST_URI'] ?? '/';
+$path = $_SERVER['REQUEST_URI'] ?? $argv[1] ?? '/';
+$_SERVER['REQUEST_URI'] = $_SERVER['REQUEST_URI'] ?? $path;
+
 $path = explode('?', $path)[0];
 
 require __DIR__ . '/../src/' . route($path);
@@ -46,6 +48,7 @@ function staticRoute($path)
         '/404'                  => 'xkcd404.php',
         '/404/'                 => 'xkcd404.php',
         '/api/strips'           => 'api_strips.php',
+        '/api/strips.json'      => 'api_strips.php',
     ];
 
     return $map[$path] ?? false;
