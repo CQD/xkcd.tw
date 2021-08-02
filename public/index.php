@@ -45,8 +45,6 @@ function staticRoute($path)
         '/feed'                 => 'feed.php',
         '/sitemap.xml'          => 'sitemap.php',
         '/random'               => 'random.php',
-        '/404'                  => 'xkcd404.php',
-        '/404/'                 => 'xkcd404.php',
         '/api/strips'           => 'api_strips.php',
         '/api/strips.json'      => 'api_strips.php',
     ];
@@ -73,15 +71,12 @@ function dynamicRoute($path)
 
 ////////////////////////////////////////////////////////////////
 
-function die404($msg = "找不到這一頁，真傷心")
+function die404()
 {
     global $twig; // i hate global...
 
     http_response_code(404);
-    echo $twig->render('error_404.twig', [
-       'page_title' => '網頁找不到（哭',
-       'msg' => $msg,
-    ]);
+    echo $twig->render('404.twig');
     die();
 }
 

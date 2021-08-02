@@ -1,0 +1,27 @@
+{% extends "main.twig" %}
+
+{% block content %}
+<h1>404</h1>
+<p id="msg404">你要看的東西我還沒翻譯到，傷心，真傷心...</p>
+
+<script><!--
+let msgs = {
+    'xkcd404':'xkcd 漫畫沒有第 404 篇，只有 404 頁面',
+    'stripmissing':'你要看的東西我還沒翻譯到，傷心，真傷心...',
+    'notfound': '你要看的這頁我找不到，是否連錯 /__\\',
+}
+
+let mode = 'stripmissing'
+
+let path = window.location.pathname
+path = path.split('/').filter(e => e).join('/') // trim slash
+if (isNaN(path)) {
+    mode = 'notfound'
+} else if ('404' === path) {
+    mode = 'xkcd404'
+}
+
+document.getElementById('msg404').textContent = msgs[mode];
+
+--></script>
+{% endblock %}
