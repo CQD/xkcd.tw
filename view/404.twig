@@ -13,12 +13,14 @@ let msgs = {
 
 let mode = 'stripmissing'
 
-let path = window.location.pathname
-path = path.split('/').filter(e => e).join('/') // trim slash
+let rawPath = window.location.pathname
+let path = rawPath.split('/').filter(e => e).join('/') // trim slash
 if (isNaN(path)) {
     mode = 'notfound'
 } else if ('404' === path) {
     mode = 'xkcd404'
+} else if ('/' === rawPath.slice(-1)) {
+    window.location.replace(`/${path}`)
 }
 
 document.getElementById('msg404').textContent = msgs[mode];
