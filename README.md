@@ -4,7 +4,7 @@
 
 修圖程式為 sketch，使用的字型為 Mac OS 內建的翩翩體-繁體（HanziPen TC）。
 
-網址為 [xkcd.tw](https://xkcd.tw)，放在 Google App Engine 上。
+網址為 [xkcd.tw](https://xkcd.tw)。過去跑 PHP 放在 Google App Engine 上，後來改為放在 Github Page 上，原本的 PHP 程式用來產生靜態頁面以及本機快速開發用。
 
 # 程式介面
 
