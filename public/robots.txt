@@ -1,5 +1,4 @@
 User-agent: *
 Sitemap: https://xkcd.tw/sitemap.xml
 Disallow: /api/
-Disallow: /random
 Allow: /
