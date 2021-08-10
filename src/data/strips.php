@@ -1,5 +1,13 @@
 <?php
 return [
+    2500 => [
+        'title' => '我一生中的地球平均溫度',
+        'caption' => '我一度對於報告中某些對於化石燃料使用狀況的預測精準度感到相當佩服。然後才想到，喔，對，當然了。',
+        'height' => 636,
+        'date' => '2021-08-09',
+        'translate_time' => '2021-08-10 17:55:57',
+        'link' => 'https://www.documentcloud.org/documents/2805576-1982-Exxon-Memo-to-Management-About-CO2',
+    ],
     2499 => [
         'title' => '棄養功能',
         'caption' => '要記得只能收養明確請求被收養的已馴化無人機，捕捉野生的無人機會違反遷移性無人機條約法案。',
