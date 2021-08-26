@@ -1,0 +1,78 @@
+{% extends "strip.twig" %}
+
+{% block comic %}
+
+{% set comics = [
+    {"heartbeat":0.86, "birth":0.24, "death":0.56, "wikipedia":0.67, "vibrator":2.99},
+    {"car_china":1.89, "car_japan":4.01, "car_germany":5.8, "car_us":6.95, "car_elsewhere":1.03},
+    {"kiss":5.53, "fire_dept":23, "holeinone":180, "turnsignal1":0.94, "turnsignal2":0.9},
+    {"earthquake1":2.43, "earthquake2":24.26, "earthquake3":242.6, "earthquake4":2426, "parliament_toilet":10.06},
+    {"flight":0.93, "book_mockingbird":42.05, "cat_mockingbird":1.82, "phoenixshoes":1.08, "phoenix":2.05},
+    {"keys":2.43, "amelia":7.79, "dogbite":7.01, "bike":24.93, "eagle":2.69},
+    {"bottles":1.27, "recycled":4.64, "meteor":1.15, "oldfaithful":5640, "shark":0.83},
+    {"us_cancer":18.99, "us_cancer_death":54.34, "dog":15.6, "cat":21.3, "wedding":0.75},
+    {"domain":0.64, "house":6.22, "tattoo":2.06, "pulsar":1.4, "facebook":4.32},
+    {"iphone":0.93, "littleleague":1.23, "ndsex":1.38, "bieber":4.73, "denverpizza":1.27}
+] %}
+
+
+<style>
+@keyframes flash{
+    0% {opacity: 30%;}
+    50% {opacity: 30%;}
+    65% {opacity: 100%;}
+    68% {opacity: 100%;}
+    75% {opacity: 85%;}
+    100% {opacity: 30%;}
+}
+@keyframes flash2{
+    0% {opacity: 30%;}
+    90% {opacity: 30%;}
+    92% {opacity: 100%;}
+    93% {opacity: 100%;}
+    100% {opacity: 30%;}
+}
+@keyframes flash3{
+    0% {opacity: 30%;}
+    99% {opacity: 30%;}
+    99.2% {opacity: 100%;}
+    100% {opacity: 30%;}
+}
+
+#comic img{
+    opacity:30%;
+    animation-name: flash;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+{% for row in comics %}{% for blockName,duration in row if duration >= 5 and duration < 100 %}
+img#{{blockName}},{% endfor %}{% endfor %}
+null{
+    animation-name: flash2;
+}
+
+{% for row in comics %}{% for blockName,duration in row if duration >= 100 %}
+img#{{blockName}},{% endfor %}{% endfor %}
+null{
+    animation-name: flash3;
+}
+
+</style>
+
+
+<div id="comic">
+
+<table style="text-align:center; margin:0 auto;">
+{% for row in comics %}
+<tr>
+{% for blockName,duration in row %}
+<td><img id="{{blockName}}" src="/s/1331/{{blockName}}.png" style="width:120px;animation-duration:{{duration}}s;" alt="{{strip.title}}" title="{{strip.caption}}"></td>
+{% endfor %}
+</tr>
+{% endfor %}
+</table>
+
+</div>
+
+{% endblock %}
