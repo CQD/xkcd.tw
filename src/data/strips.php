@@ -95,7 +95,7 @@ return [
     ],
     2443 => [
         'title' => '免疫反應',
-        'caption' => '等你去地獄之後，幫我跟天花打聲招呼。', 
+        'caption' => '等你去地獄之後，幫我跟天花打聲招呼。',
         'height' => 328,
         'date' => '2021-04-09',
         'translate_time' => '2021-05-23 09:44:34',
@@ -1992,7 +1992,7 @@ return [
         'title' => '隱藏功能',
         'caption' => '而且他也不會跳出對話方塊一直吵著要你的真實姓名。事實上你根本沒辦法設定你的名字，你得一直告訴別人你是誰。',
         'height' => 3238,
-        'og' => 
+        'og' =>
         [
             'image' => 'https://xkcd.tw/img/og_1305.jpg',
         ],
@@ -2339,7 +2339,7 @@ return [
         'title' => '點圖拖放',
         'caption' => '點圖拖放',
         'height' => 694,
-        'og' => 
+        'og' =>
         [
             'image' => 'https://xkcd.tw/img/og_1110.png',
         ],
