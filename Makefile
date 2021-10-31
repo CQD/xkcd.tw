@@ -11,10 +11,6 @@ installWithDev:
 build/image_map.php: ${STRIP_IMAGES}
 	bin/build_image_map
 
-deploy: installNoDev build/image_map.php
-	gcloud app deploy -v 'prod'  --project='sonorous-cacao-89706'
-	bin/notify_p10b
-
 server: installWithDev build/image_map.php
 	php -S localhost:8080 -t public/
 
