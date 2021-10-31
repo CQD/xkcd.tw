@@ -6,7 +6,7 @@ body{
 }
 .wrapper{
     margin:0 auto;
-    padding:5px 1em 1em;
+    padding:5px 5px 1em;
     max-width:900px;
     position:relative;
 }
@@ -17,6 +17,7 @@ body{
     margin:0;
     padding:0;
     box-sizing: border-box;
+    flex: 0 0 139px;
     height:77px;
     width:139px;
     overflow: hidden;
@@ -27,17 +28,22 @@ body{
     background-size: 100% 100%;
     display: inline-block;
 }
+header{
+    display: flex;
+    align-items: center;
+    gap:0.5em;
+    vertical-align: middle;
+}
 header p{
     font-size:18px;
-    display: inline-block;
-    vertical-align: top;
-    padding: 0.5em 0 0;
+    line-height:18px;
+    margin:0;
 }
 
 hr {
     border-color: #fff;
     color:red;
-    margin: 40px 0;   
+    margin: 40px 0;
 }
 
 #content{
@@ -118,13 +124,7 @@ a:hover{
         float:left;
     }
     header p{
-        width: calc(100vw - 32px - 104px);
-        margin:20px 0 0;
-        padding:0;
         font-size:12px;
-        line-height:1.2em;
-        max-height:2.4em;
-        overflow:hidden;
     }
     #content {
         clear:both;
