@@ -44,6 +44,7 @@ function staticRoute($path)
         '/'                     => 'index.php',
         '/feed'                 => 'feed.php',
         '/sitemap.xml'          => 'sitemap.php',
+        '/sitemap'              => 'sitemap.php',
         '/api/strips'           => 'api_strips.php',
         '/api/strips.json'      => 'api_strips.php',
     ];
