@@ -42,6 +42,7 @@ return [
         'date' => '2021-08-09',
         'translate_time' => '2021-08-10 17:55:57',
         'link' => 'https://www.documentcloud.org/documents/2805576-1982-Exxon-Memo-to-Management-About-CO2',
+        'comment' => '<p>連結的報告如果嫌全文太長，可以直接看 p31/p32 的二氧化碳累積/氣溫上升估計，幾乎是正中紅心。</p>',
     ],
     2499 => [
         'title' => '棄養功能',
