@@ -439,6 +439,27 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
         'cqd': '做你現在看到的東西的傢伙 => https://cqd.tw',
         'exit': '你無處可逃',
         'logout': '你無處可逃',
+        'sl': function(argv){
+            term.echo(
+                '<iframe width="560" height="315" src="https://www.youtube.com/embed/r4VvlwHAGtQ?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+                {raw:true}
+            )
+        },
+        'moo': function(argv) {this.cowsay(argv)},
+        'cowsay': function (argv) {
+            let max_width = 40
+
+            let width = Math.min(term.cols() - 2, max_width)
+            argv.shift()
+            term.echo(`/${'-'.repeat(width - 2)}\\`)
+            term.echo(`<div style="margin-left:1ex; width:${width}ex;">${escape_html(argv.join(' '))}</div>`, {raw:true})
+            term.echo(`\\${'_'.repeat(width - 2)}/
+   \\  ^__^
+      (oo)\\_______
+      (__)\\       )\\/\\
+          ||----w |
+          ||     ||`)
+        },
         'reboot': function(argv){
             if (session.sudo) {
                 term.echo('重新啟動中...')
@@ -564,3 +585,12 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
 
     window.term = term
 })
+
+function escape_html(text)
+{
+    let e = document.createElement('div');
+    e.textContent = text
+    text = e.innerHTML
+    e.remove()
+    return text;
+}
