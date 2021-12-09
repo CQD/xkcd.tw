@@ -30,7 +30,9 @@ $(function() {
     }
 
     let strips = {}
-    $.get('/api/strips.json', function(d){
+    fetch('/api/strips.json')
+    .then(d => d.json())
+    .then(function(d){
         let lastStrip, lastStripTime = '1999-01-01 00:00:00';
 
         strips = d
@@ -48,7 +50,26 @@ $(function() {
             }
         }
 
-        setTimeout(() => term.exec(`xkcd ${lastStrip.id}`), 500)
+        let step = 60
+        let gap = 700
+        let offset = 0
+
+        let foo = [
+            'cat welcome.txt',
+            `xkcd ${lastStrip.id}`,
+        ].forEach(cmd => {
+
+            let c = ''
+            for (let i = 0; i < cmd.length; i++) {
+                c += cmd[i]
+                let foo = c
+                setTimeout(e => term.set_command(foo), offset);
+                offset += step
+            }
+            setTimeout(e => {term.exec(cmd); term.set_command('')}, offset);
+            offset += gap
+        })
+
     })
 
     let getFilesystem = function(path){
@@ -579,8 +600,6 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
         set_prompt('[[;white;]' + session.username + '@xkcd-tw][[;gold;]$ ]')
         document.title = session.username + '@xkcd-tw - xkcd 中文翻譯主控台';
     })
-
-    term.exec('cat welcome.txt')
 
     $('.terminal').on('load', 'img', function(e){
         setTimeout(function(){term.scroll_to_bottom()}, 100)
