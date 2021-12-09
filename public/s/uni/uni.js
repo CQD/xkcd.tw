@@ -55,8 +55,8 @@ $(function() {
         let offset = 0
 
         let foo = [
-            'cat welcome.txt',
             `xkcd ${lastStrip.id}`,
+            'cat welcome.txt',
         ].forEach(cmd => {
 
             let c = ''
