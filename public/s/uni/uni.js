@@ -24,9 +24,7 @@ $(function() {
         'why.txt': 'https://uni.xkcd.com <= 這是某一年的愚人節玩笑',
         'strips' : {
         },
-        'bin': {
-            'game': function(){term.echo('你覺得遊戲很好玩，然後浪費了許多人生')}
-        }
+        'bin': {}
     }
 
     let strips = {}
@@ -407,6 +405,7 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
         },
         'cls': function(){term.exec('clear')},
         'why': function(){runCommand('cat', ['cat', '~/why.txt'])},
+        'game': '你覺得遊戲很好玩，然後浪費了許多人生',
         'vi': '你應該用 emacs',
         'vim': '你應該用 emacs',
         'emacs': '你應該用 vim',
@@ -530,6 +529,9 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
     cmds.dir   = cmds.ls
     cmds.woman = cmds.man
     cmds.restart = cmds.reboot
+
+    Object.keys(cmds).forEach(cmd => filesystem.bin[cmd] = function(argv){cmds[cmd](argv)})
+    delete filesystem.bin['commandnotfound']
 
     let runCommand = function(name, argv){
         argv = argv ? argv.filter(p => {return p.charAt(0) != '-'}) : argv
