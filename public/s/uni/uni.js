@@ -496,7 +496,7 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
             }
         },
         'image': function(argv){
-            term.echo(`<img src="${argv[1]}">`, {raw:true}) // XXX 對這裡有 injection 我還沒想到怎麼解決...
+            term.echo(`<img src="${escape_html(argv[1])}">`, {raw:true})
         }
     }
 
