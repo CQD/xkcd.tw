@@ -450,9 +450,12 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
             let max_width = 40
 
             let width = Math.min(term.cols() - 2, max_width)
+
             argv.shift()
+            let msg = argv.join(' ').trim() || "哞"
+
             term.echo(`/${'-'.repeat(width - 2)}\\`)
-            term.echo(`<div style="margin-left:1ex; width:${width}ex;">${escape_html(argv.join(' '))}</div>`, {raw:true})
+            term.echo(`<div style="margin-left:1em; width:${width}ex;">${escape_html(msg)}</div>`, {raw:true})
             term.echo(`\\${'_'.repeat(width - 2)}/
    \\  ^__^
       (oo)\\_______
