@@ -16,7 +16,6 @@ $(function() {
     let session = {
         'username': 'guest',
         'pwd' : '/',
-        'col': $(window).width() / parseFloat($("body").css("font-size")) * 1.5,
     }
 
     let filesystem = {
@@ -214,7 +213,7 @@ $(function() {
                 let outstring = ''
                 let rowLen = 0
                 for (key in files) {
-                    if (rowLen + maxNameLen > session.col) {
+                    if (rowLen + maxNameLen > term.cols() * 0.9) {
                         outstring += '\n'
                         rowLen = 0
                     }
