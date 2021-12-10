@@ -239,12 +239,12 @@ $(function() {
                 term.echo(path + ': 檔案或資料夾不存在');
             } else if (typeof tgt == 'object') {
                 term.echo(path + ': 這是一個資料夾');
+            } else if (typeof tgt == 'string') {
+                term.echo(tgt);
+            } else if (typeof tgt == 'function') {
+                term.echo('印出了一些亂碼然後你發現這是個執行檔');
             } else {
-                if (typeof tgt == 'function') {
-                    tgt()
-                } else {
-                    term.echo(tgt)
-                }
+                term.echo('恭喜你，找到 bug 了 :/');
             }
         },
         'file': function(argv){
