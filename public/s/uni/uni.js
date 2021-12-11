@@ -21,8 +21,7 @@ $(function() {
     let filesystem = {
         'welcome.txt': '歡迎使用 unixkcd-tw 主控台\n\n`xkcd {id}` 可以看指定的漫畫\n`ls strips` 可以看到漫畫清單\n\n用 `ls` `cd` `cat` 可以瀏覽檔案系統\n',
         'why.txt': 'https://uni.xkcd.com <= 這是某一年的愚人節玩笑',
-        'strips' : {
-        },
+        'strips' : {},
         'bin': {}
     }
 
@@ -116,7 +115,7 @@ $(function() {
             }
 
             if (1 === argv.length) {
-                term.echo("APT 有著超牛力量")
+                this.cowsay(['cowsay', "APT 有著超牛力量"])
             } else if ('moo' == action) {
                 term.echo("你今天哞了沒？")
             } else if (!ops[action]) {
@@ -259,17 +258,11 @@ $(function() {
                 return
             }
 
-            let filetype = '這啥？怎麼會出現在這裡？'
-            switch (typeof tgt){
-                case 'function':
-                    filetype = '是個執行檔'
-                    break;
-                case 'object':
-                    filetype = '是個資料夾'
-                    break;
-                case 'string':
-                    filetype = '是個文字檔'
-            }
+            let filetype = {
+                'function':'是個執行檔',
+                'object':'是個資料夾',
+                'string':'是個文字檔',
+            }[typeof tgt] || '這啥？怎麼會出現在這裡？'
             term.echo(path + ": " + filetype)
         },
         'help': function(argv){
@@ -458,13 +451,43 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
         'cqd': '做你現在看到的東西的傢伙 => https://cqd.tw',
         'exit': '你無處可逃',
         'logout': '你無處可逃',
+        'ag': '雄辯是銀',
+        'docker': '不必',
+        'wc': '這裡沒有廁所，你應該挖洞',
+        'wget': '去用 curl',
+        'curl': function(argv){
+            let url = null;
+            argv.forEach(arg => {
+                arg = arg.toLowerCase()
+                let has_http = (arg.indexOf("http://") == 0 || arg.indexOf("https://") == 0)
+                let has_dot = arg.match(/[^\\/]\.[a-z]/)
+                if (has_http || has_dot) {
+                    url = arg
+                }
+            })
+
+            if (!url) {
+                term.echo('所以我說那個網址呢？')
+            } else {
+                term.echo(
+`<html>
+<head>
+    <title>網頁標題</title>
+</head>
+<body>
+    <h1>網頁標題</h1>
+    <p>其實我是騙你的</p>
+</body>
+</html>`
+                )
+            }
+        },
         'sl': function(argv){
             term.echo(
                 '<iframe width="560" height="315" src="https://www.youtube.com/embed/r4VvlwHAGtQ?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
                 {raw:true}
             )
         },
-        'moo': function(argv) {this.cowsay(argv)},
         'cowsay': function (argv) {
             let max_width = 40
 
@@ -528,6 +551,7 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
     cmds.dir   = cmds.ls
     cmds.woman = cmds.man
     cmds.restart = cmds.reboot
+    cmds.moo   = cmds.cowsay
 
     Object.keys(cmds).forEach(cmd => filesystem.bin[cmd] = function(argv){cmds[cmd](argv)})
     delete filesystem.bin['commandnotfound']
