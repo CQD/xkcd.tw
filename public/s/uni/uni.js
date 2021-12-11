@@ -598,7 +598,7 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
     })
 
     term.set_prompt(function(set_prompt){
-        set_prompt('[[;white;]' + session.username + '@xkcd-tw][[;gold;]$ ]')
+        set_prompt(`[[;white;]${session.username}@xkcd-tw] ${session.pwd} [[;gold;]$ ]`)
         document.title = session.username + '@xkcd-tw - xkcd 中文翻譯主控台';
     })
 
