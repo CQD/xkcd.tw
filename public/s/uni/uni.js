@@ -147,7 +147,7 @@ $(function() {
             if (1 == argv.length) {
                 term.echo('請輸入主機位址')
             } else if (-1 != ['ptt.cc', 'bbsu@ptt.cc', 'bbs@ptt.cc', 'ptt'].indexOf(argv[1])) {
-                window.open('https://term.ptt.cc/')
+                openorecho('https://term.ptt.cc/')
             } else {
                 term.echo('不過就算告訴我主機位址，我還是不會連線的')
             }
@@ -414,7 +414,7 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
         'notepad': ['你應該用小畫家', '你應該用 notepad++', '你應該用 Ultraedit'],
         'notepad++': ['你應該用小畫家', '你應該用筆記本', '你應該用 Ultraedit'],
         'ultraedit': ['你應該用小畫家', '你應該用筆記本', '你應該用 notepad++'],
-        'mspaint': function(){window.open('https://jspaint.app')},
+        'mspaint': function(){openorecho('https://jspaint.app')},
         'git': [
             'conflict 解不掉',
             'rebase 之後爛了',
@@ -608,6 +608,10 @@ ${tgt}已經斷氣，倒在地上死亡了!!,
 
     window.term = term
 })
+
+function openorecho(url){
+    window.open(url) || term.echo(`自己點連結 => ${url}`)
+}
 
 function escape_html(text)
 {
