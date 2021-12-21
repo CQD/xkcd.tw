@@ -21,9 +21,11 @@ $strip['next_id'] = $strip_ids[$pos - 1] ?? null;
 $strip['prev_id'] = $strip_ids[$pos + 1] ?? null;
 
 // OG
+$strip_img_url = sprintf('https://xkcd.tw/%s', ltrim($strip['img_url'], '/'));
+$og_image_url = $strip['og']['image'] ?? $strip_img_url;
 $og['title'] = "xkcd 中文翻譯：" . $strip['title'];
 $og['url'] = sprintf('https://xkcd.tw/%d', $id);
-$og['image'] = $strip['img_url'];
+$og['image'] = $og_image_url;
 
 if (0 !== strpos($og['image'], 'https://') && 0 !== strpos($og['image'], 'http://')) {
     $og['image'] = "https://xkcd.tw/" . ltrim($og['image'], '/');
@@ -39,8 +41,8 @@ $ld = [
     "@type" => "ComicIssue",
     "issueNumber" => $id,
     "name" => $strip['title'],
-    "image" => $strip['img_url'],
-    "thumbnailUrl" => $strip['img_url'],
+    "image" => $strip_img_url,
+    "thumbnailUrl" => $og_image_url,
     "datePublished" => date('Y-m-d', strtotime($strip['translate_time'])),
     "translationOfWork" => [
         "@type" => "ComicIssue",
