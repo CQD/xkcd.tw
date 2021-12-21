@@ -40,7 +40,12 @@ $ld = [
     "issueNumber" => $id,
     "name" => $strip['title'],
     "image" => $strip['img_url'],
-    "translationOfWork" => sprintf("https://xkcd.com/%d/", $id),
+    "thumbnailUrl" => $strip['img_url'],
+    "datePublished" => date('Y-m-d', strtotime($strip['translate_time'])),
+    "translationOfWork" => [
+        "@type" => "ComicIssue",
+        "sameAs" => sprintf("https://xkcd.com/%d/", $id),
+    ],
     "translator" => [
         "@type" => "Person",
         "name" => "CQD",
