@@ -18,6 +18,12 @@
 #preloadIndicator{
     max-width:100%;
 }
+img:-webkit-full-screen{
+    max-height: 100vh !important;
+    max-width: 100vw !important;
+    height: min(100vh, 100vw * 395 / 553);
+    width: min(100vw, 100vh * 553 / 395);
+}
 </style>
 {% endblock %}
 
@@ -35,14 +41,16 @@
 <button id="playBtn" onclick="player.togglePlay();">▶</button>
 <button id="stepForwardBtn" onclick="player.stepFrame(1);">▶|</button>
 <button id="toLast" onclick="player.setProgress(player.maxProgress);">▶▶|</button>
+&nbsp;
+<button id="fullscreen" onclick="player.toggleFullScreen()">⤢</button>
 
 <span id="time" style="float:right"></span>
 
 </div>
 
 <div style="margin-bottom:4px">
-<button id="spd1" onclick="player.setSpeed(1.3)" class="spdbtn active">1x</button>
-<button id="spd2" onclick="player.setSpeed(2.6)" class="spdbtn">2x</button>
+<button id="spd1" onclick="player.setSpeed(1.3)" class="spdbtn">1x</button>
+<button id="spd2" onclick="player.setSpeed(2.6)" class="spdbtn active">2x</button>
 <button id="spd5" onclick="player.setSpeed(6.5)" class="spdbtn">5x</button>
 <button id="spd10" onclick="player.setSpeed(13)" class="spdbtn">10x</button>
 </div>
@@ -77,19 +85,30 @@ time = document.getElementById('time')
 preloader = document.getElementById('preloader')
 frame = document.getElementById('frame')
 
+frame.onclick = e => window.player.togglePlay()
+frame.requestFullscreen = frame.requestFullscreen || frame.webkitRequestFullscreen || frame.mozRequestFullScreen || frame.msRequestFullscreen
+
 preloadIndicator = document.getElementById('preloadIndicator')
 preloadCtx = document.getElementById('preloadIndicator').getContext('2d')
 
 window.player = {
-    defaultSpeed: 1.3,
+    defaultSpeed: 2.6,
     maxProgress: 3099,
 
     speed: 0,    // frame per second
     progress: 1, // current frame
-    textframeMinTime: 800, // mininal display time for key frames, in milliseconds
+    textframeMinTime: 1000, // mininal display time for key frames, in milliseconds
     pauseReason: 'stopped',
 
     nextStep: false,
+
+    toggleFullScreen: function(){
+        if (document.fullscreenElement) {
+            document.exitFullscreen()
+        } else {
+            frame.requestFullscreen()
+        }
+    },
 
     togglePlay: function(){
         if (this.speed <= 0) {
