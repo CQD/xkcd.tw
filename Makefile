@@ -12,7 +12,7 @@ build/image_map.php: ${STRIP_IMAGES}
 	bin/build_image_map
 
 server: installWithDev build/image_map.php
-	php -S localhost:8080 -t public/
+	php -S 0.0.0.0:8080 -t public/
 
 textframe:
 	bin/1190_textframe
