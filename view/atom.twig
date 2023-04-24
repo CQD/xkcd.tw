@@ -15,9 +15,9 @@
 {% for item in items %}
 <entry>
 <title>{{ item.title }}</title>
-<summary type="html">
+<summary type="html"><![CDATA[
 <img src="https://xkcd.tw{{ item.img_url }}" alt="{{ item.caption }}" height="{{ item.height }}" title="{{ item.caption }}" />
-</summary>
+]]></summary>
 <link href="https://xkcd.tw/{{ item.id }}"></link>
 <id>https://xkcd.tw/{{ item.id }}</id>
 <updated>{{ item.translate_time }}</updated>
