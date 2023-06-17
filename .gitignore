@@ -2,3 +2,4 @@ vendor/
 build/
 tmp/
 .vscode/
+/public/api/strips.json
