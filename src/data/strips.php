@@ -1315,7 +1315,7 @@ return [
         'height' => 487,
         'date' => '2018-04-30',
         'translate_time' => '2021-08-20 16:23:03',
-        'comment' => '討論中的 <a href="https://www.python.org/dev/peps/pep-0582/">PEP 582</a> 有可能是未來人類文明的救星。',
+        'comment' => '討論中的 <a href="https://www.python.org/dev/peps/pep-0582/">PEP 582</a> 有可能是未來人類文明的救星。<br>並推薦這場經典演講：<a href="https://www.youtube.com/watch?v=6Nl0IYkU0hU">這樣的開發環境沒問題嗎</a>',
     ],
     1984 => [
         'title' => '誤會',
