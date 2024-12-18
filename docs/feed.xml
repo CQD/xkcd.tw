@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:webfeeds="http://webfeeds.org/rss/1.0">
+
+<title>XKCD 中文翻譯</title>
+<subtitle>翻譯某個關於浪漫、諷刺、數學、以及語言的漫畫</subtitle>
+<link href="https://xkcd.tw"></link>
+<link href="https://xkcd.tw/feed" rel="self"></link>
+<link href="https://pubsubhubbub.appspot.com/" rel="hub"></link>
+<id>https://xkcd.tw/feed</id>
+<updated>2024-09-01T00:26:00+08:00</updated>
+<author><name>CQD</name></author>
+<webfeeds:analytics id="UA-368263-19" engine="GoogleAnalytics"/>
+
+<entry>
+<title>物理 vs 魔法</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2904.png" alt="「在黑夜最深之時，你的兄弟會在 150 公尺的高度橫向飛過」是對你的非魔法的投石機的正常物理預測；而「你被詛咒去建造出會把你的兄弟投射出去的投石機」則是來自拉格朗日力學。" height="293" title="「在黑夜最深之時，你的兄弟會在 150 公尺的高度橫向飛過」是對你的非魔法的投石機的正常物理預測；而「你被詛咒去建造出會把你的兄弟投射出去的投石機」則是來自拉格朗日力學。" />
+]]></summary>
+<link href="https://xkcd.tw/2904"></link>
+<id>https://xkcd.tw/2904</id>
+<updated>2024-09-01T00:26:00+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>房間密碼</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2937.png" alt="不好意思讓你把這串亂七八糟的數字記起來了。不知道有沒有幫助，但至少這可以幫你記得你們家那個小親戚的生日，如果他正好是 2018 年 2 月 5 日出生的話。" height="290" title="不好意思讓你把這串亂七八糟的數字記起來了。不知道有沒有幫助，但至少這可以幫你記得你們家那個小親戚的生日，如果他正好是 2018 年 2 月 5 日出生的話。" />
+]]></summary>
+<link href="https://xkcd.tw/2937"></link>
+<id>https://xkcd.tw/2937</id>
+<updated>2024-09-01T00:06:00+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>儲水箱</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2974.png" alt="我們考慮在水箱裡面加上加壓系統，確保水箱內壓力恆定，看能不能阻止這些人。" height="250" title="我們考慮在水箱裡面加上加壓系統，確保水箱內壓力恆定，看能不能阻止這些人。" />
+]]></summary>
+<link href="https://xkcd.tw/2974"></link>
+<id>https://xkcd.tw/2974</id>
+<updated>2024-08-31T21:45:00+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>古典週期表</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2975.png" alt="個人覺得水銀更像是某種「濕土」混合元素。" height="530" title="個人覺得水銀更像是某種「濕土」混合元素。" />
+]]></summary>
+<link href="https://xkcd.tw/2975"></link>
+<id>https://xkcd.tw/2975</id>
+<updated>2024-08-31T21:39:00+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>時間旅人死亡原因</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2976.png" alt="許多飢腸轆轆的旅行者試著 Google「三葉蟲甲殼類過敏」，但發現他們的電信商在奧陶紀沒有提供服務。" height="677" title="許多飢腸轆轆的旅行者試著 Google「三葉蟲甲殼類過敏」，但發現他們的電信商在奧陶紀沒有提供服務。" />
+]]></summary>
+<link href="https://xkcd.tw/2976"></link>
+<id>https://xkcd.tw/2976</id>
+<updated>2024-08-31T21:31:00+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>羅馬數字</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2637.png" alt="100he100k out th1s 1nno5at4e str1ng en100o501ng 15e been 500e5e50op1ng! 1t&#039;s 6rtua100y perfe100t! ...hang on, what&#039;s a &quot;virtuacy&quot;?" height="244" title="100he100k out th1s 1nno5at4e str1ng en100o501ng 15e been 500e5e50op1ng! 1t&#039;s 6rtua100y perfe100t! ...hang on, what&#039;s a &quot;virtuacy&quot;?" />
+]]></summary>
+<link href="https://xkcd.tw/2637"></link>
+<id>https://xkcd.tw/2637</id>
+<updated>2024-08-31T14:50:16+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>科學研究的三種類型</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2977.png" alt="隱藏的第四種類型：「我們把標準理論套用到他們的所有樹的地圖，得到了可疑的結果」" height="305" title="隱藏的第四種類型：「我們把標準理論套用到他們的所有樹的地圖，得到了可疑的結果」" />
+]]></summary>
+<link href="https://xkcd.tw/2977"></link>
+<id>https://xkcd.tw/2977</id>
+<updated>2024-08-31T13:21:00+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>困住</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2978.png" alt="至少他們在下面並不孤單" height="323" title="至少他們在下面並不孤單" />
+]]></summary>
+<link href="https://xkcd.tw/2978"></link>
+<id>https://xkcd.tw/2978</id>
+<updated>2024-08-31T13:04:00+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>溫室效應</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2889.png" alt="阿瑞尼斯得到答案之後，向他的朋友抱怨，向他的朋友抱怨為了「微不足道的事情」而「浪費了一整年」在算繁重的數學計算理論上可能出現在遙遠未來的二氧化碳累積（引自 Crawford，1997）" height="315" title="阿瑞尼斯得到答案之後，向他的朋友抱怨，向他的朋友抱怨為了「微不足道的事情」而「浪費了一整年」在算繁重的數學計算理論上可能出現在遙遠未來的二氧化碳累積（引自 Crawford，1997）" />
+]]></summary>
+<link href="https://xkcd.tw/2889"></link>
+<id>https://xkcd.tw/2889</id>
+<updated>2024-02-28T21:36:00+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>對數對齊</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2884.png" alt="影片的對數尺度可以同時不對齊時間跟空間座標。" height="312" title="影片的對數尺度可以同時不對齊時間跟空間座標。" />
+]]></summary>
+<link href="https://xkcd.tw/2884"></link>
+<id>https://xkcd.tw/2884</id>
+<updated>2024-02-28T21:24:00+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>球體可口程度</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2893.png" alt="棒球確實對這個理論造成了一定的挑戰，但我相信我們只是還沒找到正確的調味法方法。" height="392" title="棒球確實對這個理論造成了一定的挑戰，但我相信我們只是還沒找到正確的調味法方法。" />
+]]></summary>
+<link href="https://xkcd.tw/2893"></link>
+<id>https://xkcd.tw/2893</id>
+<updated>2024-02-28T21:10:00+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>壓平行星</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2750.png" alt="我們預計把小行星帶變成速度不同的行星環之間的球狀軸承。" height="647" title="我們預計把小行星帶變成速度不同的行星環之間的球狀軸承。" />
+]]></summary>
+<link href="https://xkcd.tw/2750"></link>
+<id>https://xkcd.tw/2750</id>
+<updated>2024-02-28T21:01:00+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>古德哈特定律</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2899.png" alt="[不久後] 我很榮幸能報告，我們目前每小時能夠發現數百個已經不合時宜的指標。" height="321" title="[不久後] 我很榮幸能報告，我們目前每小時能夠發現數百個已經不合時宜的指標。" />
+]]></summary>
+<link href="https://xkcd.tw/2899"></link>
+<id>https://xkcd.tw/2899</id>
+<updated>2024-02-28T20:50:00+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>軌道爭論</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2898.png" alt="「有些人說光是一種波，有些人說光是粒子，所以我猜光是某種既是波又是粒子的東西，看到什麼取決於你的觀點。我有說對嗎？」「對你說的沒錯但這樣不對」" height="323" title="「有些人說光是一種波，有些人說光是粒子，所以我猜光是某種既是波又是粒子的東西，看到什麼取決於你的觀點。我有說對嗎？」「對你說的沒錯但這樣不對」" />
+]]></summary>
+<link href="https://xkcd.tw/2898"></link>
+<id>https://xkcd.tw/2898</id>
+<updated>2024-02-28T20:39:00+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>閏光年</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2897.png" alt="教宗額我略十三世在 1582 短暫的縮短了光年的長度，這導致導航技術的混亂，並損失了多艘教宗星艦。" height="388" title="教宗額我略十三世在 1582 短暫的縮短了光年的長度，這導致導航技術的混亂，並損失了多艘教宗星艦。" />
+]]></summary>
+<link href="https://xkcd.tw/2897"></link>
+<id>https://xkcd.tw/2897</id>
+<updated>2024-02-28T20:31:00+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>紅位移</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2853.png" alt="那你在 z=-0.000000000000045 的時候有空嗎？" height="264" title="那你在 z=-0.000000000000045 的時候有空嗎？" />
+]]></summary>
+<link href="https://xkcd.tw/2853"></link>
+<id>https://xkcd.tw/2853</id>
+<updated>2023-12-20T21:31:16+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>衰變類型</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2860.png" alt="與鐵器時代的塌陷不同，青銅時代的塌陷會放出能量，因為銅跟錫都已經過了鐵的結合能高峰。" height="360" title="與鐵器時代的塌陷不同，青銅時代的塌陷會放出能量，因為銅跟錫都已經過了鐵的結合能高峰。" />
+]]></summary>
+<link href="https://xkcd.tw/2860"></link>
+<id>https://xkcd.tw/2860</id>
+<updated>2023-12-20T21:25:29+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>太空字型</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2863.png" alt="And over heeee[...]eeeere (i)s Saturn." height="238" title="And over heeee[...]eeeere (i)s Saturn." />
+]]></summary>
+<link href="https://xkcd.tw/2863"></link>
+<id>https://xkcd.tw/2863</id>
+<updated>2023-12-20T21:13:54+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>DateTime</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2867.png" alt="不只是時區與閏秒。地球上的 SI 標準秒數由於相對性原理會比較慢，所以有太空用的時間標準（TCB、TDB）會使用比 UTC/Unix time 快的 SI 秒數。T2 - T1 = [老天不知道，鬼也不跟你誰]" height="478" title="不只是時區與閏秒。地球上的 SI 標準秒數由於相對性原理會比較慢，所以有太空用的時間標準（TCB、TDB）會使用比 UTC/Unix time 快的 SI 秒數。T2 - T1 = [老天不知道，鬼也不跟你誰]" />
+]]></summary>
+<link href="https://xkcd.tw/2867"></link>
+<id>https://xkcd.tw/2867</id>
+<updated>2023-12-20T21:00:04+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>訓練了神經網路</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2173.png" alt="這也包含你教別人做的事情。「對啊，我訓練了艾蜜莉跟凱文這兩個神經網路來解 support ticket」" height="404" title="這也包含你教別人做的事情。「對啊，我訓練了艾蜜莉跟凱文這兩個神經網路來解 support ticket」" />
+]]></summary>
+<link href="https://xkcd.tw/2173"></link>
+<id>https://xkcd.tw/2173</id>
+<updated>2023-09-27T16:52:30+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>週末</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/1073.png" alt="同樣是加菲，你不會想到貓比前總統還更會寫激勵人心的演講稿，但你現在知道了。" height="258" title="同樣是加菲，你不會想到貓比前總統還更會寫激勵人心的演講稿，但你現在知道了。" />
+]]></summary>
+<link href="https://xkcd.tw/1073"></link>
+<id>https://xkcd.tw/1073</id>
+<updated>2023-09-27T00:39:07+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>鳥與恐龍</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/1211.png" alt="當然，霸王龍的身高比起麻雀要更接近劍龍，但這不代表什麼。「Dinosaur Comics」的作者 Ryan North 的身高比起人類平均值還更接近某些恐龍。" height="571" title="當然，霸王龍的身高比起麻雀要更接近劍龍，但這不代表什麼。「Dinosaur Comics」的作者 Ryan North 的身高比起人類平均值還更接近某些恐龍。" />
+]]></summary>
+<link href="https://xkcd.tw/1211"></link>
+<id>https://xkcd.tw/1211</id>
+<updated>2023-09-25T01:47:48+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>單車設計時間線</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/1673.png" alt="我得老實說，1950 年代騎單車滿辛苦的。" height="311" title="我得老實說，1950 年代騎單車滿辛苦的。" />
+]]></summary>
+<link href="https://xkcd.tw/1673"></link>
+<id>https://xkcd.tw/1673</id>
+<updated>2023-09-25T01:29:19+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>洗車機</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2815.png" alt="還好現代的洗車機用合成鯨鬚，而不是像 1800 年代那樣用從鯨魚身上取鬚。" height="239" title="還好現代的洗車機用合成鯨鬚，而不是像 1800 年代那樣用從鯨魚身上取鬚。" />
+]]></summary>
+<link href="https://xkcd.tw/2815"></link>
+<id>https://xkcd.tw/2815</id>
+<updated>2023-09-25T01:23:40+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>日蝕分類</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2816.png" alt="當日擁蝕發生時，最佳地點是有良好視野且晴朗無雲的自然環境保護區，最不理想的地點是月球表面。" height="572" title="當日擁蝕發生時，最佳地點是有良好視野且晴朗無雲的自然環境保護區，最不理想的地點是月球表面。" />
+]]></summary>
+<link href="https://xkcd.tw/2816"></link>
+<id>https://xkcd.tw/2816</id>
+<updated>2023-09-25T01:14:16+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>路徑最小化</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2821.png" alt="你當然也會買冰淇淋給游泳的人！你才沒那麼壞心。" height="559" title="你當然也會買冰淇淋給游泳的人！你才沒那麼壞心。" />
+]]></summary>
+<link href="https://xkcd.tw/2821"></link>
+<id>https://xkcd.tw/2821</id>
+<updated>2023-09-25T01:06:38+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>系外行星觀察</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2828.png" alt="NASA 比較喜歡說他們的漫遊車在「尋找過去的生命」而不講「抓鬼」。" height="272" title="NASA 比較喜歡說他們的漫遊車在「尋找過去的生命」而不講「抓鬼」。" />
+]]></summary>
+<link href="https://xkcd.tw/2828"></link>
+<id>https://xkcd.tw/2828</id>
+<updated>2023-09-25T00:58:02+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>冰山效率</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2829.png" alt="我們的實驗性含氦氣空腔的氣溶膠冰山成功達到 100% 效率，幾乎不會碰到水，而且能離開水面飛行，以更有效地追逐那些逃跑的傲慢郵輪。" height="250" title="我們的實驗性含氦氣空腔的氣溶膠冰山成功達到 100% 效率，幾乎不會碰到水，而且能離開水面飛行，以更有效地追逐那些逃跑的傲慢郵輪。" />
+]]></summary>
+<link href="https://xkcd.tw/2829"></link>
+<id>https://xkcd.tw/2829</id>
+<updated>2023-09-25T00:51:18+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>蛋白質</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/1430.png" alt="看喔，如果我拉C端的尾巴，結合通道就會縮起來！" height="255" title="看喔，如果我拉C端的尾巴，結合通道就會縮起來！" />
+]]></summary>
+<link href="https://xkcd.tw/1430"></link>
+<id>https://xkcd.tw/1430</id>
+<updated>2023-07-16T11:18:44+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>柯尼斯堡</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2694.png" alt="一開始我想說可能得要用金子或什麼的來支付，直到我發現這是十八世紀，我只要帶一捲錫箔就好。" height="343" title="一開始我想說可能得要用金子或什麼的來支付，直到我發現這是十八世紀，我只要帶一捲錫箔就好。" />
+]]></summary>
+<link href="https://xkcd.tw/2694"></link>
+<id>https://xkcd.tw/2694</id>
+<updated>2023-07-15T13:18:39+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>螢火蟲</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2802.png" alt="我對於有著影火蟲的二號地球感到同情。" height="573" title="我對於有著影火蟲的二號地球感到同情。" />
+]]></summary>
+<link href="https://xkcd.tw/2802"></link>
+<id>https://xkcd.tw/2802</id>
+<updated>2023-07-15T13:09:13+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>主機排隊</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/186.png" alt="如果我買到 Wii，那會是我的第一台遊戲主機。" height="364" title="如果我買到 Wii，那會是我的第一台遊戲主機。" />
+]]></summary>
+<link href="https://xkcd.tw/186"></link>
+<id>https://xkcd.tw/186</id>
+<updated>2023-06-17T16:20:36+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>物理量</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2780.png" alt="哈勃長度大約 1.9 公尺（躺下時），艾德溫哈勃滿高的。" height="182" title="哈勃長度大約 1.9 公尺（躺下時），艾德溫哈勃滿高的。" />
+]]></summary>
+<link href="https://xkcd.tw/2780"></link>
+<id>https://xkcd.tw/2780</id>
+<updated>2023-06-17T16:11:11+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>維基百科文章標題</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2782.png" alt="我並不會墮落到去破壞他人財產，但我也沒有高尚到不會去刪除偶而冒出來的「此條目包含過多僅特定讀者會感興趣的過度細節內容」標籤。" height="439" title="我並不會墮落到去破壞他人財產，但我也沒有高尚到不會去刪除偶而冒出來的「此條目包含過多僅特定讀者會感興趣的過度細節內容」標籤。" />
+]]></summary>
+<link href="https://xkcd.tw/2782"></link>
+<id>https://xkcd.tw/2782</id>
+<updated>2023-06-17T15:57:13+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>幽浮的證據</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2786.png" alt="[數十年之後的未來]「好消息是我們確實接到外星人的通訊了，壞消息是他們在問 2019 年版的貓」" height="397" title="[數十年之後的未來]「好消息是我們確實接到外星人的通訊了，壞消息是他們在問 2019 年版的貓」" />
+]]></summary>
+<link href="https://xkcd.tw/2786"></link>
+<id>https://xkcd.tw/2786</id>
+<updated>2023-06-17T15:50:43+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>冰山</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2787.png" alt="90% 的冰山藏在水面下，但那 90% 只用了自己 10% 的腦袋，所以實際上是 9%。" height="397" title="90% 的冰山藏在水面下，但那 90% 只用了自己 10% 的腦袋，所以實際上是 9%。" />
+]]></summary>
+<link href="https://xkcd.tw/2787"></link>
+<id>https://xkcd.tw/2787</id>
+<updated>2023-06-17T15:42:58+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>音階</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2788.png" alt="山魔王的宮殿當時被意外地寫在對數/對數座標紙上" height="222" title="山魔王的宮殿當時被意外地寫在對數/對數座標紙上" />
+]]></summary>
+<link href="https://xkcd.tw/2788"></link>
+<id>https://xkcd.tw/2788</id>
+<updated>2023-06-17T15:35:17+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>熱泵</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2790.png" alt="如果沒有要升級成電動的版本，我至少不該讓門常常開著。" height="400" title="如果沒有要升級成電動的版本，我至少不該讓門常常開著。" />
+]]></summary>
+<link href="https://xkcd.tw/2790"></link>
+<id>https://xkcd.tw/2790</id>
+<updated>2023-06-17T15:16:17+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>物理法則</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/1670.png" alt="物理法則在學習的時候是很開心，但作為一個有著無比精巧的眼睛，而且在充滿尖銳物體的世界中演化出來的生物組織，我對於生物學對於我的反射神經的校正充滿無比的信任。" height="331" title="物理法則在學習的時候是很開心，但作為一個有著無比精巧的眼睛，而且在充滿尖銳物體的世界中演化出來的生物組織，我對於生物學對於我的反射神經的校正充滿無比的信任。" />
+]]></summary>
+<link href="https://xkcd.tw/1670"></link>
+<id>https://xkcd.tw/1670</id>
+<updated>2023-05-11T00:38:45+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>手術</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/644.png" alt="該死，他不只是沒把東西裝上去，還縫上了「Vista Ready」的貼紙。" height="191" title="該死，他不只是沒把東西裝上去，還縫上了「Vista Ready」的貼紙。" />
+]]></summary>
+<link href="https://xkcd.tw/644"></link>
+<id>https://xkcd.tw/644</id>
+<updated>2023-05-11T00:24:28+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>一比一大小</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2761.png" alt="其實還有個沒有切邊的版本，但是不太容易找到支援該版本的螢幕。" height="281" title="其實還有個沒有切邊的版本，但是不太容易找到支援該版本的螢幕。" />
+]]></summary>
+<link href="https://xkcd.tw/2761"></link>
+<id>https://xkcd.tw/2761</id>
+<updated>2023-05-11T00:15:17+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>氦氣儲存庫</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2766.png" alt="政府已經試著賣掉聯邦氦氣儲存庫好幾年了，但是拍賣目前暫停，要等他們想出辦法來解釋現在這個狀況。" height="251" title="政府已經試著賣掉聯邦氦氣儲存庫好幾年了，但是拍賣目前暫停，要等他們想出辦法來解釋現在這個狀況。" />
+]]></summary>
+<link href="https://xkcd.tw/2766"></link>
+<id>https://xkcd.tw/2766</id>
+<updated>2023-05-11T00:07:43+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>食譜相對性</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2767.png" alt="這裡說要把洋蔥切成四分之一段，但我最好我最好修正長度收縮的差異。" height="331" title="這裡說要把洋蔥切成四分之一段，但我最好我最好修正長度收縮的差異。" />
+]]></summary>
+<link href="https://xkcd.tw/2767"></link>
+<id>https://xkcd.tw/2767</id>
+<updated>2023-05-11T00:01:19+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>重疊的圓</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2769.png" alt="「太陽跟月亮的范恩圖是個圓形」-- 有人在食甚的時候刻意這麼說" height="260" title="「太陽跟月亮的范恩圖是個圓形」-- 有人在食甚的時候刻意這麼說" />
+]]></summary>
+<link href="https://xkcd.tw/2769"></link>
+<id>https://xkcd.tw/2769</id>
+<updated>2023-05-10T23:41:02+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>銘牌</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2772.png" alt="[下方] 此地於 2023 年 5 月 12 日，我終於學會怎麼用電鑽的水泥鑽頭。" height="281" title="[下方] 此地於 2023 年 5 月 12 日，我終於學會怎麼用電鑽的水泥鑽頭。" />
+]]></summary>
+<link href="https://xkcd.tw/2772"></link>
+<id>https://xkcd.tw/2772</id>
+<updated>2023-05-10T23:33:01+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>叫床聲很大</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/316.png" alt="當然了，球型或拋物面反射器會導致異常性的行為。" height="414" title="當然了，球型或拋物面反射器會導致異常性的行為。" />
+]]></summary>
+<link href="https://xkcd.tw/316"></link>
+<id>https://xkcd.tw/316</id>
+<updated>2023-04-05T15:54:23+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>阿基米德</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/857.png" alt="給人以魚，不然他會毀掉剩下的唯一一瓶解毒劑。" height="285" title="給人以魚，不然他會毀掉剩下的唯一一瓶解毒劑。" />
+]]></summary>
+<link href="https://xkcd.tw/857"></link>
+<id>https://xkcd.tw/857</id>
+<updated>2023-04-05T13:46:17+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>歐特雲</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/1297.png" alt="...我想試試，等等，我馬上回來" height="253" title="...我想試試，等等，我馬上回來" />
+]]></summary>
+<link href="https://xkcd.tw/1297"></link>
+<id>https://xkcd.tw/1297</id>
+<updated>2023-04-05T13:41:20+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>置蛋策略</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/2408.png" alt="中立邪惡是給那些想要讓重量維持在蛋盒中央，卻又討厭其他這麼做的人用的。" height="527" title="中立邪惡是給那些想要讓重量維持在蛋盒中央，卻又討厭其他這麼做的人用的。" />
+]]></summary>
+<link href="https://xkcd.tw/2408"></link>
+<id>https://xkcd.tw/2408</id>
+<updated>2023-04-05T13:35:16+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+<entry>
+<title>宇宙暗流</title>
+<summary type="html"><![CDATA[
+<img src="https://xkcd.tw/strip/502.png" alt="先鋒十號跟十一號觀測到的異常現象，來自於我的愛的力量。" height="215" title="先鋒十號跟十一號觀測到的異常現象，來自於我的愛的力量。" />
+]]></summary>
+<link href="https://xkcd.tw/502"></link>
+<id>https://xkcd.tw/502</id>
+<updated>2023-04-05T13:27:23+08:00</updated>
+<author><name>CQD</name></author>
+</entry>
+
+</feed>
