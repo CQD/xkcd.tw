@@ -3790,7 +3790,7 @@ return [
     ],
     644 => [
         'title' => '手術',
-        'caption' => '該死，他不只是把東西裝上去，還縫上了「Vista Ready」的貼紙。',
+        'caption' => '該死，他不只是沒把東西裝上去，還縫上了「Vista Ready」的貼紙。',
         'height' => 191,
         'date' => '2009-10-02',
         'translate_time' => '2023-05-11 00:24:28',
