@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>xkcd 314 對象年齡計算機</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.8, maximum-scale=4.0">
+<meta name="description" content="依照 xkcd 314 設計的對象年齡計算機">
+<link rel="stylesheet" type="text/css" href="../../css/normalize.css"/>
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="/img/favicon.ico" type="image/x-icon"/>
+<style>
+:root{
+    font-family: "HanziPen TC", "Comic Sans", sans-serif;
+    color:#444;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.wrapper{
+    padding:4em 1em 2em;
+    max-width:900px;
+    margin:0 auto;
+    text-align:center;
+}
+
+input{
+    font-family:inherit;
+    font-size:inherit;
+    text-align:center;
+    border:none;
+    border-bottom:1px dotted #000;
+    outline:none;
+}
+#msg{
+    white-space: pre-line
+}
+#loli{
+    display:none;
+}
+</style>
+</head>
+<body>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-368263-19', 'auto');
+ga('send', 'pageview');
+</script>
+<div class="wrapper">
+    <p>這是依照 <a href="/314">xkcd 314</a> 設計的，適合的對象年齡計算機。也可以用來勸誡<a href="https://medium.com/@CQD/3fdc14b9f01e">蘿莉控</a>不要犯罪。</p>
+    <noscript><p>不過這個用 Javascript 跑，沒開的話是不會動的。</p></noscript>
+    <br>
+    <p>輸入你的年齡：<input id="ageInput"></p>
+    <p id="loli">小女生的年齡：<input id="loliInput" value=12></p>
+    <br>
+    <p id="msg"></p>
+
+</div>
+<script type="text/javascript"><!--
+const inputListener = function(e) {
+    let age = parseInt(ageInput.value);
+    let errMsg = false;
+    if (!age || age < 0) {
+        errMsg = '請輸入正整數';
+    } else if (age < 14) {
+        errMsg = '由於公式的限制，年齡不得低於 14 歲';
+    } else if (age > 200) {
+        errMsg = '老妖怪的適合交往對象年齡很～廣～很～廣～';
+    }
+
+    if (errMsg) {
+        loliP.style.display = 'none';
+        msg.textContent = errMsg
+        return
+    }
+
+    let range = scr(age);
+
+    let loli = parseInt(loliInput.value) || 12;
+    let waitLoli = waitLoliYear(age, loli);
+
+    loliP.style.display = 'block';
+    msg.textContent = `如果不想被社會鄙視，你的對象年齡應該在 ${range.min} 歲跟 ${range.max} 歲之間\n\n`;
+    msg.textContent += (waitLoli > 0)
+        ? `如果你喜歡今年 ${loli} 歲的小女孩，你應該要等 ${waitLoli} 年後你 ${age + waitLoli} 歲他 ${loli + waitLoli} 歲的時候才能下手。`
+        : `如果你喜歡今年 ${loli} 歲的小女孩...現在就可以下手了！`
+};
+
+function scr(age){
+    return {
+        min: Math.ceil(age / 2 + 7),
+        max: Math.floor(2 * age - 14)
+    }
+}
+
+function waitLoliYear(age, loli){
+    let waitLoli = 0;
+    let r = scr(age);
+    while (loli + waitLoli < r.min || loli + waitLoli > r.max) {
+        waitLoli++;
+        r = scr(age + waitLoli);
+    }
+    return waitLoli;
+}
+
+const ageInput = document.getElementById('ageInput');
+const loliInput = document.getElementById('loliInput');
+const loliP = document.getElementById('loli');
+const msg = document.getElementById('msg');
+
+ageInput.addEventListener('input', inputListener);
+loliInput.addEventListener('input', inputListener);
+--></script>
+</body>
+</html>
