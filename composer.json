@@ -1,5 +1,6 @@
 {
     "require": {
-        "twig/twig": "^2.15.3"
+        "php": ">=8.4",
+        "twig/twig": "^3.21"
     }
 }

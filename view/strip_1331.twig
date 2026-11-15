@@ -46,13 +46,13 @@
     animation-iteration-count: infinite;
 }
 
-{% for row in comics %}{% for blockName,duration in row if duration >= 5 and duration < 100 %}
+{% for row in comics %}{% for blockName,duration in row|filter(d => d >= 5 and d < 100) %}
 img#{{blockName}},{% endfor %}{% endfor %}
 null{
     animation-name: flash2;
 }
 
-{% for row in comics %}{% for blockName,duration in row if duration >= 100 %}
+{% for row in comics %}{% for blockName,duration in row|filter(d => d >= 100) %}
 img#{{blockName}},{% endfor %}{% endfor %}
 null{
     animation-name: flash3;
