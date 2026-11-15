@@ -30,4 +30,4 @@ jobs:
       - name: Push to Github Page
         run: ./bin/deploy_gh_page
         env:
-          DEPLOY_TOKEN: ${{ secrets.deploy_token }}
+          DEPLOY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
