@@ -32,11 +32,39 @@ if ('img' === $action) {
     if (!isset($meta['img'])) {
         fputs(STDERR, "沒有 img 沒辦法拉圖檔!!\n");
     } else {
-        $imgUrl = $meta['img'];
+        $candidates = [];
         if ($id >= 1063) {
-            $imgUrl = str_replace(['.png','.jpg'], ['_2x.png', '_2x.jpg'], $imgUrl);
+            $candidates[] = preg_replace('/\.(png|jpg)$/', '_2x.$1', $meta['img']);
         }
-        $fileName = $id . "_" . basename($imgUrl);
-        shell_exec("bash -c \"wget {$imgUrl} -O {$fileName} && echo 圖檔已存為 {$fileName} >&2 || echo {$imgUrl} 儲存失敗 >&2\" ");
+        $candidates[] = $meta['img'];
+
+        $saved = false;
+        foreach (array_unique($candidates) as $imgUrl) {
+            $fileName = $id . "_" . basename($imgUrl);
+            if (download($imgUrl, $fileName)) {
+                fputs(STDERR, "圖檔已存為 {$fileName}\n");
+                $saved = true;
+                break;
+            }
+            fputs(STDERR, "{$imgUrl} 下載失敗\n");
+        }
+
+        if (!$saved) {
+            exit(1);
+        }
     }
+}
+
+////////////////////////////////////////
+
+function download(string $url, string $fileName): bool
+{
+    // 失敗的時候要讓外面知道錯誤，不要默默吞掉
+    $cmd = sprintf('curl -fsSL %s -o %s', escapeshellarg($url), escapeshellarg($fileName));
+    exec($cmd, $output, $code);
+    if (0 !== $code) {
+        @unlink($fileName);
+        return false;
+    }
+    return true;
 }
