@@ -1,0 +1,139 @@
+body{
+    font-family: sans-serif;
+    background-color: white;
+    color: #35525C;
+    line-height: 190%;
+}
+.wrapper{
+    margin:0 auto;
+    padding:5px 5px 1em;
+    max-width:900px;
+    position:relative;
+}
+
+#logo{
+    font-size:1px;
+    color:white;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    flex: 0 0 139px;
+    height:77px;
+    width:139px;
+    overflow: hidden;
+    text-indent:-100000px;
+    background-image: url(/img/logo.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+}
+header{
+    display: flex;
+    align-items: center;
+    gap:0.5em;
+    vertical-align: middle;
+}
+header p{
+    font-size:18px;
+    line-height:18px;
+    margin:0;
+}
+
+hr {
+    border-color: #fff;
+    color:red;
+    margin: 40px 0;
+}
+
+#content{
+    text-align: center;
+    margin:0 0 50px;
+    padding:0 0 50px ;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+}
+
+#content h1{
+    margin-bottom: 0;
+}
+
+#content img{
+    max-width: 100%;
+}
+
+
+footer{
+    text-align: center;
+    color:#999;
+    font-size: small;
+}
+
+#strip_list{
+  -webkit-columns: 250px 3;
+     -moz-columns: 250px 3;
+          columns: 250px 3;
+  text-align:left;
+  margin-left:4em;
+  list-style: none;
+  padding:0;
+}
+#strip_list span{
+    display:inline-block;
+    width:5ex;
+    margin-right:0.7em;
+    opacity:0.4;
+}
+#strip_list span:before{
+    content:"[";
+}
+#strip_list span:after{
+    content:"]";
+}
+
+a:link, a:visited{
+    color:#963;
+    text-decoration: none;
+}
+a:hover{
+    color:#f93;
+}
+
+.prevLink{
+    float:left;
+    margin:0 0 0 3em;
+}
+.nextLink{
+    float:right;
+    margin:0 3em 0 0;
+}
+.randomLink{
+    position: absolute;
+    left:calc(50% - 2em);
+}
+
+.comment{
+    font-size:small;
+    color:#66aaae;
+}
+
+@media (max-width:620px){
+    header h1{
+        height: 58px;
+        width: 103px;
+        float:left;
+    }
+    header p{
+        font-size:12px;
+    }
+    #content {
+        clear:both;
+    }
+    #content h1{
+        font-size:25px;
+    }
+    .prevLink, .nextLink{
+        margin: 0;
+        font-size: 14px;
+    }
+}
